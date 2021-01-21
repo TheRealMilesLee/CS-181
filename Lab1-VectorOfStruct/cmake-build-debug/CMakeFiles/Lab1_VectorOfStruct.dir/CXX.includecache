@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab1-VectorOfStruct/Vector_of_Struct.cpp
+iomanip
+-
+iostream
+-
+string
+-
+vector
+-
+
