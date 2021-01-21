@@ -3,4 +3,4 @@ project(Lab1_VectorOfStruct)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(Lab1_VectorOfStruct Vector_of_Struct.cpp RecordManagement.cpp RecordManagement.h)
+add_executable(Lab1_VectorOfStruct RecordManagement_Main.cpp RecordManagement.cpp RecordManagement.h)
