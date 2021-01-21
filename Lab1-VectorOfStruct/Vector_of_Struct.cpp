@@ -1,6 +1,9 @@
-// The purpose of the program is to store student record information
-// search the student record by using student_id and lastly,
-// display all the records in a menu based system
+//Hengyi Li
+//This is a RecordManagement Program
+//This Program Created by Hengyi Li on 2:44 PM, Jan 20, 2021
+//This Program has been modify by Hengyi Li on 10:42 AM, Jan 21, 2021.
+//Copyright @ 2021 Hengyi Li. All rights reserved.
+
 
 #include <iomanip>
 #include <iostream>

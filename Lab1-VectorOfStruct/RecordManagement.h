@@ -1,6 +1,8 @@
-//
-// Created by NightOwl on 1/20/21.
-//
+//Hengyi Li
+//This is a RecordManagement Program
+//This Program Created by Hengyi Li on 2:44 PM, Jan 20, 2021
+//This Program has been modify by Hengyi Li on 10:42 AM, Jan 21, 2021.
+//Copyright @ 2021 Hengyi Li. All rights reserved.
 
 #ifndef LAB1_VECTOROFSTRUCT_RECORDMANAGEMENT_H
 #define LAB1_VECTOROFSTRUCT_RECORDMANAGEMENT_H
