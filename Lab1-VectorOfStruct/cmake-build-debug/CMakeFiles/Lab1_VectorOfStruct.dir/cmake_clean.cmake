@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Lab1_VectorOfStruct.dir/RecordManagement.cpp.o"
-  "CMakeFiles/Lab1_VectorOfStruct.dir/Vector_of_Struct.cpp.o"
+  "CMakeFiles/Lab1_VectorOfStruct.dir/RecordManagement_Main.cpp.o"
   "Lab1_VectorOfStruct"
   "Lab1_VectorOfStruct.pdb"
 )

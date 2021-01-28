@@ -5,7 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab1-VectorOfStruct/RecordManagement.cpp" "/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab1-VectorOfStruct/cmake-build-debug/CMakeFiles/Lab1_VectorOfStruct.dir/RecordManagement.cpp.o"
-  "/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab1-VectorOfStruct/Vector_of_Struct.cpp" "/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab1-VectorOfStruct/cmake-build-debug/CMakeFiles/Lab1_VectorOfStruct.dir/Vector_of_Struct.cpp.o"
+  "/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab1-VectorOfStruct/RecordManagement_Main.cpp" "/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab1-VectorOfStruct/cmake-build-debug/CMakeFiles/Lab1_VectorOfStruct.dir/RecordManagement_Main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

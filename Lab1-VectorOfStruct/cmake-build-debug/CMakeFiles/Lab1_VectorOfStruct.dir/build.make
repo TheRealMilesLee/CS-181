@@ -77,18 +77,18 @@ include CMakeFiles/Lab1_VectorOfStruct.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Lab1_VectorOfStruct.dir/flags.make
 
-CMakeFiles/Lab1_VectorOfStruct.dir/Vector_of_Struct.cpp.o: CMakeFiles/Lab1_VectorOfStruct.dir/flags.make
-CMakeFiles/Lab1_VectorOfStruct.dir/Vector_of_Struct.cpp.o: ../Vector_of_Struct.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab1-VectorOfStruct/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Lab1_VectorOfStruct.dir/Vector_of_Struct.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Lab1_VectorOfStruct.dir/Vector_of_Struct.cpp.o -c /Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab1-VectorOfStruct/Vector_of_Struct.cpp
+CMakeFiles/Lab1_VectorOfStruct.dir/RecordManagement_Main.cpp.o: CMakeFiles/Lab1_VectorOfStruct.dir/flags.make
+CMakeFiles/Lab1_VectorOfStruct.dir/RecordManagement_Main.cpp.o: ../RecordManagement_Main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab1-VectorOfStruct/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Lab1_VectorOfStruct.dir/RecordManagement_Main.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Lab1_VectorOfStruct.dir/RecordManagement_Main.cpp.o -c /Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab1-VectorOfStruct/RecordManagement_Main.cpp
 
-CMakeFiles/Lab1_VectorOfStruct.dir/Vector_of_Struct.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Lab1_VectorOfStruct.dir/Vector_of_Struct.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab1-VectorOfStruct/Vector_of_Struct.cpp > CMakeFiles/Lab1_VectorOfStruct.dir/Vector_of_Struct.cpp.i
+CMakeFiles/Lab1_VectorOfStruct.dir/RecordManagement_Main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Lab1_VectorOfStruct.dir/RecordManagement_Main.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab1-VectorOfStruct/RecordManagement_Main.cpp > CMakeFiles/Lab1_VectorOfStruct.dir/RecordManagement_Main.cpp.i
 
-CMakeFiles/Lab1_VectorOfStruct.dir/Vector_of_Struct.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Lab1_VectorOfStruct.dir/Vector_of_Struct.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab1-VectorOfStruct/Vector_of_Struct.cpp -o CMakeFiles/Lab1_VectorOfStruct.dir/Vector_of_Struct.cpp.s
+CMakeFiles/Lab1_VectorOfStruct.dir/RecordManagement_Main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Lab1_VectorOfStruct.dir/RecordManagement_Main.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab1-VectorOfStruct/RecordManagement_Main.cpp -o CMakeFiles/Lab1_VectorOfStruct.dir/RecordManagement_Main.cpp.s
 
 CMakeFiles/Lab1_VectorOfStruct.dir/RecordManagement.cpp.o: CMakeFiles/Lab1_VectorOfStruct.dir/flags.make
 CMakeFiles/Lab1_VectorOfStruct.dir/RecordManagement.cpp.o: ../RecordManagement.cpp
@@ -105,13 +105,13 @@ CMakeFiles/Lab1_VectorOfStruct.dir/RecordManagement.cpp.s: cmake_force
 
 # Object files for target Lab1_VectorOfStruct
 Lab1_VectorOfStruct_OBJECTS = \
-"CMakeFiles/Lab1_VectorOfStruct.dir/Vector_of_Struct.cpp.o" \
+"CMakeFiles/Lab1_VectorOfStruct.dir/RecordManagement_Main.cpp.o" \
 "CMakeFiles/Lab1_VectorOfStruct.dir/RecordManagement.cpp.o"
 
 # External object files for target Lab1_VectorOfStruct
 Lab1_VectorOfStruct_EXTERNAL_OBJECTS =
 
-Lab1_VectorOfStruct: CMakeFiles/Lab1_VectorOfStruct.dir/Vector_of_Struct.cpp.o
+Lab1_VectorOfStruct: CMakeFiles/Lab1_VectorOfStruct.dir/RecordManagement_Main.cpp.o
 Lab1_VectorOfStruct: CMakeFiles/Lab1_VectorOfStruct.dir/RecordManagement.cpp.o
 Lab1_VectorOfStruct: CMakeFiles/Lab1_VectorOfStruct.dir/build.make
 Lab1_VectorOfStruct: CMakeFiles/Lab1_VectorOfStruct.dir/link.txt

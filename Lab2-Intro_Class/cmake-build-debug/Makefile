@@ -68,10 +68,10 @@ RM = "/Users/leemiles/Library/Application Support/JetBrains/Toolbox/apps/CLion/c
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab1-VectorOfStruct
+CMAKE_SOURCE_DIR = /Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab2-Intro_Class
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab1-VectorOfStruct/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab2-Intro_Class/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab1-VectorOfStruct/cmake-build-debug/CMakeFiles /Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab1-VectorOfStruct/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab2-Intro_Class/cmake-build-debug/CMakeFiles /Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab2-Intro_Class/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab1-VectorOfStruct/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab2-Intro_Class/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -131,71 +131,98 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Lab1_VectorOfStruct
+# Target rules for targets named Lab2_Intro_Class
 
 # Build rule for target.
-Lab1_VectorOfStruct: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Lab1_VectorOfStruct
-.PHONY : Lab1_VectorOfStruct
+Lab2_Intro_Class: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Lab2_Intro_Class
+.PHONY : Lab2_Intro_Class
 
 # fast build rule for target.
-Lab1_VectorOfStruct/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab1_VectorOfStruct.dir/build.make CMakeFiles/Lab1_VectorOfStruct.dir/build
-.PHONY : Lab1_VectorOfStruct/fast
+Lab2_Intro_Class/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab2_Intro_Class.dir/build.make CMakeFiles/Lab2_Intro_Class.dir/build
+.PHONY : Lab2_Intro_Class/fast
 
-RecordManagement.o: RecordManagement.cpp.o
+Intro_Class.o: Intro_Class.cpp.o
 
-.PHONY : RecordManagement.o
-
-# target to build an object file
-RecordManagement.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab1_VectorOfStruct.dir/build.make CMakeFiles/Lab1_VectorOfStruct.dir/RecordManagement.cpp.o
-.PHONY : RecordManagement.cpp.o
-
-RecordManagement.i: RecordManagement.cpp.i
-
-.PHONY : RecordManagement.i
-
-# target to preprocess a source file
-RecordManagement.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab1_VectorOfStruct.dir/build.make CMakeFiles/Lab1_VectorOfStruct.dir/RecordManagement.cpp.i
-.PHONY : RecordManagement.cpp.i
-
-RecordManagement.s: RecordManagement.cpp.s
-
-.PHONY : RecordManagement.s
-
-# target to generate assembly for a file
-RecordManagement.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab1_VectorOfStruct.dir/build.make CMakeFiles/Lab1_VectorOfStruct.dir/RecordManagement.cpp.s
-.PHONY : RecordManagement.cpp.s
-
-RecordManagement_Main.o: RecordManagement_Main.cpp.o
-
-.PHONY : RecordManagement_Main.o
+.PHONY : Intro_Class.o
 
 # target to build an object file
-RecordManagement_Main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab1_VectorOfStruct.dir/build.make CMakeFiles/Lab1_VectorOfStruct.dir/RecordManagement_Main.cpp.o
-.PHONY : RecordManagement_Main.cpp.o
+Intro_Class.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab2_Intro_Class.dir/build.make CMakeFiles/Lab2_Intro_Class.dir/Intro_Class.cpp.o
+.PHONY : Intro_Class.cpp.o
 
-RecordManagement_Main.i: RecordManagement_Main.cpp.i
+Intro_Class.i: Intro_Class.cpp.i
 
-.PHONY : RecordManagement_Main.i
+.PHONY : Intro_Class.i
 
 # target to preprocess a source file
-RecordManagement_Main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab1_VectorOfStruct.dir/build.make CMakeFiles/Lab1_VectorOfStruct.dir/RecordManagement_Main.cpp.i
-.PHONY : RecordManagement_Main.cpp.i
+Intro_Class.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab2_Intro_Class.dir/build.make CMakeFiles/Lab2_Intro_Class.dir/Intro_Class.cpp.i
+.PHONY : Intro_Class.cpp.i
 
-RecordManagement_Main.s: RecordManagement_Main.cpp.s
+Intro_Class.s: Intro_Class.cpp.s
 
-.PHONY : RecordManagement_Main.s
+.PHONY : Intro_Class.s
 
 # target to generate assembly for a file
-RecordManagement_Main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab1_VectorOfStruct.dir/build.make CMakeFiles/Lab1_VectorOfStruct.dir/RecordManagement_Main.cpp.s
-.PHONY : RecordManagement_Main.cpp.s
+Intro_Class.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab2_Intro_Class.dir/build.make CMakeFiles/Lab2_Intro_Class.dir/Intro_Class.cpp.s
+.PHONY : Intro_Class.cpp.s
+
+Student.o: Student.cpp.o
+
+.PHONY : Student.o
+
+# target to build an object file
+Student.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab2_Intro_Class.dir/build.make CMakeFiles/Lab2_Intro_Class.dir/Student.cpp.o
+.PHONY : Student.cpp.o
+
+Student.i: Student.cpp.i
+
+.PHONY : Student.i
+
+# target to preprocess a source file
+Student.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab2_Intro_Class.dir/build.make CMakeFiles/Lab2_Intro_Class.dir/Student.cpp.i
+.PHONY : Student.cpp.i
+
+Student.s: Student.cpp.s
+
+.PHONY : Student.s
+
+# target to generate assembly for a file
+Student.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab2_Intro_Class.dir/build.make CMakeFiles/Lab2_Intro_Class.dir/Student.cpp.s
+.PHONY : Student.cpp.s
+
+StudentCollection.o: StudentCollection.cpp.o
+
+.PHONY : StudentCollection.o
+
+# target to build an object file
+StudentCollection.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab2_Intro_Class.dir/build.make CMakeFiles/Lab2_Intro_Class.dir/StudentCollection.cpp.o
+.PHONY : StudentCollection.cpp.o
+
+StudentCollection.i: StudentCollection.cpp.i
+
+.PHONY : StudentCollection.i
+
+# target to preprocess a source file
+StudentCollection.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab2_Intro_Class.dir/build.make CMakeFiles/Lab2_Intro_Class.dir/StudentCollection.cpp.i
+.PHONY : StudentCollection.cpp.i
+
+StudentCollection.s: StudentCollection.cpp.s
+
+.PHONY : StudentCollection.s
+
+# target to generate assembly for a file
+StudentCollection.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab2_Intro_Class.dir/build.make CMakeFiles/Lab2_Intro_Class.dir/StudentCollection.cpp.s
+.PHONY : StudentCollection.cpp.s
 
 # Help Target
 help:
@@ -205,13 +232,16 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... Lab1_VectorOfStruct"
-	@echo "... RecordManagement.o"
-	@echo "... RecordManagement.i"
-	@echo "... RecordManagement.s"
-	@echo "... RecordManagement_Main.o"
-	@echo "... RecordManagement_Main.i"
-	@echo "... RecordManagement_Main.s"
+	@echo "... Lab2_Intro_Class"
+	@echo "... Intro_Class.o"
+	@echo "... Intro_Class.i"
+	@echo "... Intro_Class.s"
+	@echo "... Student.o"
+	@echo "... Student.i"
+	@echo "... Student.s"
+	@echo "... StudentCollection.o"
+	@echo "... StudentCollection.i"
+	@echo "... StudentCollection.s"
 .PHONY : help
 
 

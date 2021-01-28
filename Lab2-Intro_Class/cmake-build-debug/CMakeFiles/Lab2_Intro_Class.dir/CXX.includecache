@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab2-Intro_Class/Intro_Class.cpp
+iomanip
+-
+iostream
+-
+string
+-
+memory
+-
+StudentCollection.h
+/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab2-Intro_Class/StudentCollection.h
+Student.h
+/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab2-Intro_Class/Student.h
+istream
+-
+
+/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab2-Intro_Class/Student.h
+iostream
+-
+string
+-
+
+/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab2-Intro_Class/StudentCollection.h
+iostream
+-
+Student.h
+/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab2-Intro_Class/Student.h
+string
+-
+vector
+-
+
