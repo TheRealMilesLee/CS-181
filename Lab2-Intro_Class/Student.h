@@ -24,9 +24,9 @@ public:
 
     /**
      * This function is to set the number of the id.
-     * @param id_param is a int number that receive the user input.
+     * @param id_param is a unsigned number that receive the user input.
      */
-    void setID(int id_param)
+    void setID(unsigned id_param)
     {
       id = id_param;
     }
@@ -44,7 +44,7 @@ public:
      * This function is to get the id from the user
      * @return a integer number of ID
      */
-    int getID() const
+    unsigned getID() const
     {
       return id;
     }

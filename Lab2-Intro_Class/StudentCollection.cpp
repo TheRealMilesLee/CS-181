@@ -40,7 +40,7 @@ void StudentCollection::add_new_record()
 
 
 // search the student records based on title
-int StudentCollection::find_student_record(unsigned search_id)
+unsigned StudentCollection::find_student_record(unsigned search_id)
 {
   for (size_t index = 0; index < student_records.size (); index++)
   {
@@ -60,7 +60,7 @@ int StudentCollection::find_student_record(unsigned search_id)
 
 // if there is a student with delete_id in the record then that record would be deleted
 // otherwise, nothing happens.
-void StudentCollection::delete_record(int delete_id)
+void StudentCollection::delete_record(unsigned delete_id)
 {
   // call the find_student_record(delete_id) and store the returned value
   int position = find_student_record (delete_id);
@@ -69,7 +69,7 @@ void StudentCollection::delete_record(int delete_id)
   student_records.erase (student_records.begin () + position);
 
   // TODO if successful then display
-  // cout<<endl<<"the record had been deleted"
+   std::cout << std::endl << "the record had been deleted";
 }
 
 

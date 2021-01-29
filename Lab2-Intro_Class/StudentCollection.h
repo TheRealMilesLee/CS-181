@@ -13,7 +13,6 @@ class StudentCollection
 {
 private:
     std::vector<Student> student_records; // holds all student records
-
 public:
     /**
      * This function is to load all the records from the file.
@@ -30,17 +29,22 @@ public:
      * @param search_id is the integer value that used to search student by their id number
      * @return the search result
      */
-    int find_student_record(unsigned search_id);
+    unsigned find_student_record(unsigned search_id);
 
-    // if there is a student with delete_id in the record then that record would be deleted
-    // otherwise, nothing happens.
-    void delete_record(int delete_id);
+    /**
+     * This function is to delete the student id record that has a delete_id in the record
+     * @param delete_id is the id that being flag to be deleted
+     */
+    void delete_record(unsigned delete_id);
 
-
-    // view all student records
+    /**
+     * This function is to view all the student records.
+     */
     void view_all_records();
 
-    // save all the record in the vector to a file
+    /**
+     * This function is to save all the record in the vector to a file
+     */
     void save_all_records();
 };
 
