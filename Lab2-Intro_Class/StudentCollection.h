@@ -15,16 +15,21 @@ private:
     std::vector<Student> student_records; // holds all student records
 
 public:
-
+    /**
+     * This function is to load all the records from the file.
+     */
     void load_all_records();
 
-
-    // this function will input values for a new movie record
-    // and will return that
+    /**
+     * This function will input values for a new movie record
+     */
     void add_new_record();
 
-
-    // search the student records based on title
+    /**
+     * This function is used to find the record of student based on the id number
+     * @param search_id is the integer value that used to search student by their id number
+     * @return the search result
+     */
     int find_student_record(unsigned search_id);
 
     // if there is a student with delete_id in the record then that record would be deleted
@@ -37,9 +42,6 @@ public:
 
     // save all the record in the vector to a file
     void save_all_records();
-
-
-}; // studentcollection class ends
-
+};
 
 #endif //LAB2_INTRO_CLASS_STUDENTCOLLECTION_H
