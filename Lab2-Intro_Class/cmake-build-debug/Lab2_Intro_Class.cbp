@@ -83,6 +83,9 @@
 		<Unit filename="D:/CS-Related/Spring2021-CS181/Lab2-Intro_Class/Intro_Class.cpp">
 			<Option target="Lab2_Intro_Class"/>
 		</Unit>
+		<Unit filename="D:/CS-Related/Spring2021-CS181/Lab2-Intro_Class/Student.cpp">
+			<Option target="Lab2_Intro_Class"/>
+		</Unit>
 		<Unit filename="D:/CS-Related/Spring2021-CS181/Lab2-Intro_Class/Student.h">
 			<Option target="Lab2_Intro_Class"/>
 		</Unit>

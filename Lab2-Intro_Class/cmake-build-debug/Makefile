@@ -169,6 +169,33 @@ Intro_Class.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab2_Intro_Class.dir\build.make CMakeFiles/Lab2_Intro_Class.dir/Intro_Class.cpp.s
 .PHONY : Intro_Class.cpp.s
 
+Student.obj: Student.cpp.obj
+
+.PHONY : Student.obj
+
+# target to build an object file
+Student.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab2_Intro_Class.dir\build.make CMakeFiles/Lab2_Intro_Class.dir/Student.cpp.obj
+.PHONY : Student.cpp.obj
+
+Student.i: Student.cpp.i
+
+.PHONY : Student.i
+
+# target to preprocess a source file
+Student.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab2_Intro_Class.dir\build.make CMakeFiles/Lab2_Intro_Class.dir/Student.cpp.i
+.PHONY : Student.cpp.i
+
+Student.s: Student.cpp.s
+
+.PHONY : Student.s
+
+# target to generate assembly for a file
+Student.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab2_Intro_Class.dir\build.make CMakeFiles/Lab2_Intro_Class.dir/Student.cpp.s
+.PHONY : Student.cpp.s
+
 StudentCollection.obj: StudentCollection.cpp.obj
 
 .PHONY : StudentCollection.obj
@@ -208,6 +235,9 @@ help:
 	@echo ... Intro_Class.obj
 	@echo ... Intro_Class.i
 	@echo ... Intro_Class.s
+	@echo ... Student.obj
+	@echo ... Student.i
+	@echo ... Student.s
 	@echo ... StudentCollection.obj
 	@echo ... StudentCollection.i
 	@echo ... StudentCollection.s

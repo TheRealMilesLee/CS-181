@@ -11,7 +11,7 @@
 #include "Student.h"
 #include <istream>
 
-const int NOT_FOUND = -1;
+const unsigned NOT_FOUND = -1;
 
 // menu choices
 enum MenuOptions
@@ -23,18 +23,15 @@ enum MenuOptions
  * This function used to display the menu and return the selection
  * @return the choice from the user
  */
-int display_menu();
+unsigned display_menu();
 
 int main()
 {
   std::unique_ptr<Student> myStudent (new Student);
-
-  int choice = EXIT;  // gets the choice from the user
+  unsigned choice = EXIT;  // gets the choice from the user
   StudentCollection myStudentRecords;
-
   // load all student entries from the file, create objects, and add them in the collection
   myStudentRecords.load_all_records ();
-
   do
   {
     choice = display_menu ();
@@ -42,14 +39,11 @@ int main()
     switch (choice)
     {
       case ADD_NEW: // add new record
-
         myStudentRecords.add_new_record ();
         break;
 
-
       case SEARCH: // search based on title
-        int search_id;
-
+        unsigned search_id;
         // get the ID to search from the user
         std::cout << std::endl << "Enter the ID that you want to search: ";
         std::cin >> search_id;
@@ -59,14 +53,13 @@ int main()
         break;
 
       case VIEW_ALL: // view all records
-
         // call the function view_all_records to display all student records
         myStudentRecords.view_all_records ();
         break;
 
 
       case DELETE: // delete a record
-        int delete_id;
+        unsigned delete_id;
         std::cout << std::endl << "Enter the ID that you want to delete: ";
         std::cin >> delete_id;
         std::cin.ignore(); // consume the new line character
@@ -94,9 +87,8 @@ int main()
   return 0;
 }
 
-
 // display the menu and return the selection
-int display_menu()
+unsigned display_menu()
 {
   std::cout << std::endl << std::endl << std::to_string (ADD_NEW) + ". Add a new student record" << std::endl
        << std::to_string (VIEW_ALL) + ". View all student records" << std::endl
@@ -105,9 +97,7 @@ int display_menu()
        << std::to_string (SAVE_ALL) + ". Save all student records in file" << std::endl
        << std::to_string (EXIT) + ". Exit the program" << std::endl
        << "Your choice: ";
-
-  int choice = EXIT; // default choice is exit
-
+  unsigned choice = EXIT; // default choice is exit
   std::cin >> choice; // getting the user's choice
 
   return choice;

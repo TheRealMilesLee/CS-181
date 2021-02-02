@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "D:/CS-Related/Spring2021-CS181/Lab2-Intro_Class/Intro_Class.cpp" "D:/CS-Related/Spring2021-CS181/Lab2-Intro_Class/cmake-build-debug/CMakeFiles/Lab2_Intro_Class.dir/Intro_Class.cpp.obj"
+  "D:/CS-Related/Spring2021-CS181/Lab2-Intro_Class/Student.cpp" "D:/CS-Related/Spring2021-CS181/Lab2-Intro_Class/cmake-build-debug/CMakeFiles/Lab2_Intro_Class.dir/Student.cpp.obj"
   "D:/CS-Related/Spring2021-CS181/Lab2-Intro_Class/StudentCollection.cpp" "D:/CS-Related/Spring2021-CS181/Lab2-Intro_Class/cmake-build-debug/CMakeFiles/Lab2_Intro_Class.dir/StudentCollection.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

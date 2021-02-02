@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/CS-Related/Spring2021-CS181/Lab2-Intro_Class/Student.h
+iostream
+-
+string
+-
+
+D:/CS-Related/Spring2021-CS181/Lab2-Intro_Class/StudentCollection.cpp
+StudentCollection.h
+D:/CS-Related/Spring2021-CS181/Lab2-Intro_Class/StudentCollection.h
+iostream
+-
+fstream
+-
+Student.h
+D:/CS-Related/Spring2021-CS181/Lab2-Intro_Class/Student.h
+vector
+-
+string
+-
+
+D:/CS-Related/Spring2021-CS181/Lab2-Intro_Class/StudentCollection.h
+iostream
+-
+Student.h
+D:/CS-Related/Spring2021-CS181/Lab2-Intro_Class/Student.h
+string
+-
+vector
+-
+
