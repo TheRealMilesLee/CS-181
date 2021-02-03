@@ -14,7 +14,9 @@
 const std::string FILE_NAME = "student_record.txt";
 const unsigned NOT_FOUND = -1;
 
-
+/**
+ * This function is to load all the records from the file.
+ */
 void StudentCollection::load_all_records()
 {
   std::ifstream infile;
@@ -36,9 +38,9 @@ void StudentCollection::load_all_records()
   }
 }
 
-
-// this function will input values for a new movie record
-// and will return that
+/**
+* This function will input values for a new movie record
+*/
 void StudentCollection::add_new_record()
 {
   unsigned id;
@@ -55,8 +57,11 @@ void StudentCollection::add_new_record()
   student_records.push_back(newStudent);
 }
 
-
-// search the student records based on title
+/**
+ * This function is used to find the record of student based on the id number
+ * @param search_id is the integer value that used to search student by their id number
+ * @return the search result
+ */
 unsigned StudentCollection::find_student_record(int search_id)
 {
   for (size_t index = 0; index < student_records.size(); index++)
@@ -72,8 +77,10 @@ unsigned StudentCollection::find_student_record(int search_id)
   return NOT_FOUND; // a negative value to indicate the record has not been found
 }
 
-// if there is a student with delete_id in the record then that record would be deleted
-// otherwise, nothing happens.
+/**
+ * This function is to delete the student id record that has a delete_id in the record
+ * @param delete_id is the id that being flag to be deleted
+ */
 void StudentCollection::delete_record(int delete_id)
 {
   // call the find_student_record(delete_id) and store the returned value
@@ -88,7 +95,9 @@ void StudentCollection::delete_record(int delete_id)
 
 }
 
-// view all student records
+/**
+ * This function is to view all the student records.
+ */
 void StudentCollection::view_all_records()
 {
   Student view_records;
@@ -100,7 +109,9 @@ void StudentCollection::view_all_records()
   }
 }
 
-// save all the record in the vector to a file
+/**
+ * This function is to save all the record in the vector to a file
+ */
 void StudentCollection::save_all_records()
 {
   Student output_records;
