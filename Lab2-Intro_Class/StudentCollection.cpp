@@ -11,7 +11,7 @@
 #include <vector>
 #include <string>
 
-const std::string FILE_NAME = "student_record.txt";
+const std::string FILE_NAME = "../student_record.txt";
 const unsigned NOT_FOUND = -1;
 
 /**
@@ -27,15 +27,15 @@ void StudentCollection::load_all_records()
     Student origional_file;
     while(infile >> student_file)
     {
-      origional_file.set_record_from_file(student_file);
+      student_file = origional_file.to_string();
       student_records.push_back(origional_file);
     }
-    infile.close();
   }
   else
   {
     std::cout << "File could not found!" << std::endl;
   }
+  infile.close();
 }
 
 /**
@@ -121,14 +121,12 @@ void StudentCollection::save_all_records()
   output_file.open(FILE_NAME);
   if(!output_file.fail())
   {
-    for(size_t loop = 0; loop < student_records.size(); loop++)
-    {
-      
-    }
+    output_file << output_records.to_string();
     std::cout << "The operation is successfully completed!" <<std::endl;
   }
   else
   {
     std::cout << "This file does not exist on the disk!" << std::endl;
   }
+  output_file.close();
 }

@@ -19,10 +19,8 @@ private:
 public:
     void setName(std::string name_of_student);
     void setID(unsigned id_param);
-    void set_record_from_file(std::string file_original);
     std::string getName();
     unsigned getID() const;
-    std::string get_record_from_file();
     std::string to_string();
 };
 #endif //LAB2_INTRO_CLASS_STUDENT_H

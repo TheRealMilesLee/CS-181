@@ -25,15 +25,6 @@ void Student::setID(unsigned id_param)
 }
 
 /**
- * This function is to set the record from the file.
- * @param file_original is the file that comes from the disk
- */
-void Student::set_record_from_file(std::string file_original)
-{
-  file = file_original;
-}
-
-/**
  * This function is to get the name that from user input.
  * @return a string value of name.
  */
@@ -49,15 +40,6 @@ std::string Student::getName()
 unsigned Student::getID() const
 {
   return id;
-}
-
-/**
- * This function is to get the record from the file.
- * @return the file that has been modified.
- */
-std::string Student::get_record_from_file()
-{
-  return file;
 }
 
 /**
