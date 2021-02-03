@@ -86,7 +86,7 @@ unsigned StudentCollection::find_student_record(int search_id)
 void StudentCollection::delete_record(int delete_id)
 {
   // call the find_student_record(delete_id) and store the returned value
-  int position = find_student_record (delete_id);
+  int position = find_student_record(delete_id);
   // TODO if the return value is a positive value then
   if(position > 0)
   {
@@ -101,7 +101,7 @@ void StudentCollection::delete_record(int delete_id)
 void StudentCollection::view_all_records()
 {
   Student aStudent;
-  std::cout << std::endl << std::endl << "We have the following student records: ";
+  std::cout << std::endl << std::endl << "We have the following student records: " << std::endl;
   // use a loop and call the to_string method to display the records
   for (size_t looptimes = 0; looptimes < student_records.size(); looptimes++)
   {
