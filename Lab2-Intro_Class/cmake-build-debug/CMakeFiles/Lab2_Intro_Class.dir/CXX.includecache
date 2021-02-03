@@ -6,10 +6,30 @@
 
 #IncludeRegexTransform: 
 
+D:/CS-Related/Spring2021-CS181/Lab2-Intro_Class/Intro_Class.cpp
+iostream
+-
+string
+-
+memory
+-
+StudentCollection.h
+D:/CS-Related/Spring2021-CS181/Lab2-Intro_Class/StudentCollection.h
+Student.h
+D:/CS-Related/Spring2021-CS181/Lab2-Intro_Class/Student.h
+istream
+-
+
+D:/CS-Related/Spring2021-CS181/Lab2-Intro_Class/Student.cpp
+Student.h
+D:/CS-Related/Spring2021-CS181/Lab2-Intro_Class/Student.h
+
 D:/CS-Related/Spring2021-CS181/Lab2-Intro_Class/Student.h
 iostream
 -
 string
+-
+vector
 -
 
 D:/CS-Related/Spring2021-CS181/Lab2-Intro_Class/StudentCollection.cpp
