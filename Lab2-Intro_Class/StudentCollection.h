@@ -32,13 +32,13 @@ public:
      * @param search_id is the integer value that used to search student by their id number
      * @return the search result
      */
-    unsigned find_student_record(unsigned search_id);
+    unsigned find_student_record(int search_id);
 
     /**
      * This function is to delete the student id record that has a delete_id in the record
      * @param delete_id is the id that being flag to be deleted
      */
-    void delete_record(unsigned delete_id);
+    void delete_record(int delete_id);
 
     /**
      * This function is to view all the student records.
@@ -50,5 +50,4 @@ public:
      */
     void save_all_records();
 };
-
 #endif //LAB2_INTRO_CLASS_STUDENTCOLLECTION_H

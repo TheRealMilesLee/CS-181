@@ -6,6 +6,7 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
 #ifndef LAB2_INTRO_CLASS_STUDENT_H
 #define LAB2_INTRO_CLASS_STUDENT_H
 
@@ -13,7 +14,8 @@ class Student
 {
 private:
     unsigned id;
-    std::string name;  
+    std::string name;
+    std::string file;
 public:
     /**
      * This function is to set the name that comes from user input.
@@ -60,5 +62,14 @@ public:
       std::string result = std::to_string (id) + " -- " + name;
       return result;
     }
+
+    std::string set_record_from_file(std::string file_origional)
+    {
+      file = file_origional;
+      return file;
+    }
+
+    std::string get_
+
 };
 #endif //LAB2_INTRO_CLASS_STUDENT_H

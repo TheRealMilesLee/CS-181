@@ -16,28 +16,24 @@ const unsigned NOT_FOUND = -1;
 
 
 void StudentCollection::load_all_records()
-{ // TODO as soon as the program starts,
-  // read the student record entries from the file FILE_NAME and
-  // create student objects for each entry
-  // add them to the student_records collection
+{
   std::ifstream infile;
   infile.open(FILE_NAME);
   std::string student_file;
   if(!infile.fail())
   {
     Student origional_file;
-    while(infile >> origional_file.)
+    while(infile >> student_file)
     {
-
+      origional_file.load_record_from_file(student_file);
       student_records.push_back(origional_file);
     }
-
+    infile.close();
   }
   else
   {
     std::cout << "File could not found!" << std::endl;
   }
-
 }
 
 
@@ -45,35 +41,23 @@ void StudentCollection::load_all_records()
 // and will return that
 void StudentCollection::add_new_record()
 {
-  Student new_student;
-  // TODO input the values for the student record (id and name)
-  std::string student_name;
-  std::cout << std::endl << "Student Name: ";
-  std::cin >> new_student.setName(student_name);
-
-
-
-
+  unsigned id;
+  std::string name;
   std::cout << std::endl << "Student ID: ";
-  //cin>> id;
-
-  //cin.ignore(); // ignores the newline character
-
+  std::cin>> id;
+  std::cin.ignore(); // ignores the newline character
   std::cout << "Student Name: ";
-  //getline(cin, name);
+  std::getline(std::cin, name);
 
-  // Declare a variable of Student object
   Student newStudent;
-
-  // TODO use the public methods to initialize the student object
-  // add the object in the student records vector
-
-
+  newStudent.setID(id);
+  newStudent.setName(name);
+  student_records.push_back(newStudent);
 }
 
 
 // search the student records based on title
-unsigned StudentCollection::find_student_record(unsigned search_id)
+unsigned StudentCollection::find_student_record(int search_id)
 {
   for (size_t index = 0; index < student_records.size(); index++)
   {
@@ -81,7 +65,6 @@ unsigned StudentCollection::find_student_record(unsigned search_id)
     {
       std::cout << std::endl << "The record has been found: ";
       std::cout << student_records.at(index).to_string();
-
       return index;
     }
   }
@@ -91,16 +74,18 @@ unsigned StudentCollection::find_student_record(unsigned search_id)
 
 // if there is a student with delete_id in the record then that record would be deleted
 // otherwise, nothing happens.
-void StudentCollection::delete_record(unsigned delete_id)
+void StudentCollection::delete_record(int delete_id)
 {
   // call the find_student_record(delete_id) and store the returned value
   int position = find_student_record (delete_id);
 
   // TODO if the return value is a positive value then
-  student_records.erase (student_records.begin () + position);
+  if(position > 0)
+  {
+    student_records.erase (student_records.begin () + position);
+    std::cout << std::endl << "the record had been deleted";
+  }
 
-  // TODO if successful then display
-   std::cout << std::endl << "the record had been deleted";
 }
 
 // view all student records
@@ -125,12 +110,7 @@ void StudentCollection::save_all_records()
   output_file.open(FILE_NAME);
   if(!output_file.fail())
   {
-     std::string records_out;
-    for(size_t loop = 0; loop < student_records.size(); loop++)
-    {
-      output_records.to_string(records_out) = student_records.at(loop);
-    }
-
+    output_file << output_records.load_record_from_file()
     std::cout << "The operation is successfully completed!" <<std::endl;
   }
 }
