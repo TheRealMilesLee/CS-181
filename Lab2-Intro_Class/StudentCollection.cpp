@@ -21,14 +21,16 @@ void StudentCollection::load_all_records()
 {
   std::ifstream infile;
   infile.open(FILE_NAME);
-  std::string student_file;
+  unsigned student_id;
+  std::string student_name;
   if(!infile.fail())
   {
-    Student origional_file;
-    while(infile >> student_file)
+    Student aStudent;
+    while(infile >> student_id && getline(infile, student_name))
     {
-      student_file = origional_file.to_string();
-      student_records.push_back(origional_file);
+      aStudent.setID(student_id);
+      aStudent.setName(student_name);
+      student_records.push_back(aStudent);
     }
   }
   else
@@ -50,7 +52,7 @@ void StudentCollection::add_new_record()
   std::cin.ignore(); // ignores the newline character
   std::cout << "Student Name: ";
   std::getline(std::cin, name);
-
+  
   Student newStudent;
   newStudent.setID(id);
   newStudent.setName(name);
@@ -85,14 +87,12 @@ void StudentCollection::delete_record(int delete_id)
 {
   // call the find_student_record(delete_id) and store the returned value
   int position = find_student_record (delete_id);
-
   // TODO if the return value is a positive value then
   if(position > 0)
   {
     student_records.erase (student_records.begin () + position);
     std::cout << std::endl << "the record had been deleted";
   }
-
 }
 
 /**
@@ -100,12 +100,13 @@ void StudentCollection::delete_record(int delete_id)
  */
 void StudentCollection::view_all_records()
 {
-  Student view_records;
+  Student aStudent;
   std::cout << std::endl << std::endl << "We have the following student records: ";
   // use a loop and call the to_string method to display the records
   for (size_t looptimes = 0; looptimes < student_records.size(); looptimes++)
   {
-    std::cout << view_records.to_string() << std::endl; // display the student records
+    aStudent = student_records.at(looptimes);
+    std::cout << aStudent.to_string() << std::endl; // display the student records
   }
 }
 
@@ -115,14 +116,13 @@ void StudentCollection::view_all_records()
 void StudentCollection::save_all_records()
 {
   Student output_records;
-  // TODO when this option is selected,
-  // write each student object information in one single line in the file
   std::ofstream output_file;
   output_file.open(FILE_NAME);
   if(!output_file.fail())
   {
     for(size_t loop = 0; loop < student_records.size(); loop++)
     {
+      output_records = student_records.at(loop);
       output_file << output_records.to_string();
     }
     std::cout << "The operation is successfully completed!" <<std::endl;
