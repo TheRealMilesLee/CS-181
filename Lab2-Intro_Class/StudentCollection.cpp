@@ -121,7 +121,10 @@ void StudentCollection::save_all_records()
   output_file.open(FILE_NAME);
   if(!output_file.fail())
   {
-    output_file << output_records.to_string();
+    for(size_t loop = 0; loop < student_records.size(); loop++)
+    {
+      output_file << output_records.to_string();
+    }
     std::cout << "The operation is successfully completed!" <<std::endl;
   }
   else
