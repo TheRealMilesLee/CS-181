@@ -6,33 +6,33 @@
 
 #IncludeRegexTransform: 
 
-/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab2-Intro_Class/Intro_Class.cpp
-iomanip
--
+D:/CS-Related/Spring2021-CS181/Lab2-Intro_Class/Student.h
 iostream
 -
 string
 -
-memory
+vector
 -
+
+D:/CS-Related/Spring2021-CS181/Lab2-Intro_Class/StudentCollection.cpp
 StudentCollection.h
-/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab2-Intro_Class/StudentCollection.h
-Student.h
-/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab2-Intro_Class/Student.h
-istream
--
-
-/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab2-Intro_Class/Student.h
+D:/CS-Related/Spring2021-CS181/Lab2-Intro_Class/StudentCollection.h
 iostream
+-
+fstream
+-
+Student.h
+D:/CS-Related/Spring2021-CS181/Lab2-Intro_Class/Student.h
+vector
 -
 string
 -
 
-/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab2-Intro_Class/StudentCollection.h
+D:/CS-Related/Spring2021-CS181/Lab2-Intro_Class/StudentCollection.h
 iostream
 -
 Student.h
-/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab2-Intro_Class/Student.h
+D:/CS-Related/Spring2021-CS181/Lab2-Intro_Class/Student.h
 string
 -
 vector
