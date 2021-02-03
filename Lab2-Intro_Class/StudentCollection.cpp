@@ -25,7 +25,7 @@ void StudentCollection::load_all_records()
     Student origional_file;
     while(infile >> student_file)
     {
-      origional_file.load_record_from_file(student_file);
+      origional_file.set_record_from_file(student_file);
       student_records.push_back(origional_file);
     }
     infile.close();
@@ -110,7 +110,14 @@ void StudentCollection::save_all_records()
   output_file.open(FILE_NAME);
   if(!output_file.fail())
   {
-    output_file << output_records.load_record_from_file()
+    for(size_t loop = 0; loop < student_records.size(); loop++)
+    {
+      
+    }
     std::cout << "The operation is successfully completed!" <<std::endl;
+  }
+  else
+  {
+    std::cout << "This file does not exist on the disk!" << std::endl;
   }
 }

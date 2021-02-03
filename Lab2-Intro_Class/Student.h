@@ -36,6 +36,15 @@ public:
     }
 
     /**
+     * This function is to set the record from the file.
+     * @param file_original is the file that comes from the disk
+     */
+    void set_record_from_file(std::string file_original)
+    {
+      file = file_original;
+    }
+
+    /**
      * This function is to get the name that from user input.
      * @return a string value of name.
      */
@@ -54,6 +63,15 @@ public:
     }
 
     /**
+     * This function is to get the record from the file.
+     * @return the file that has been modified.
+     */
+    std::string get_record_from_file()
+    {
+      return file;
+    }
+
+    /**
      * This function is to creating a single string value
      * @return the value that the function create.
      */
@@ -63,13 +81,9 @@ public:
       return result;
     }
 
-    std::string set_record_from_file(std::string file_origional)
-    {
-      file = file_origional;
-      return file;
-    }
 
-    std::string get_
+
+
 
 };
 #endif //LAB2_INTRO_CLASS_STUDENT_H
