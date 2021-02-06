@@ -8,11 +8,10 @@
 #include <iostream>
 #include <fstream>
 #include "Student.h"
-#include <vector>
 #include <string>
 
-const std::string FILE_NAME = "../student_record.txt";
-const unsigned NOT_FOUND = -1;
+const std::string FILE_NAME = "student_record.txt";
+const int NOT_FOUND = -1;
 
 /**
  * This function is to load all the records from the file.
@@ -48,7 +47,7 @@ void StudentCollection::add_new_record()
   unsigned id;
   std::string name;
   std::cout << std::endl << "Student ID: ";
-  std::cin>> id;
+  std::cin >> id;
   std::cin.ignore(); // ignores the newline character
   std::cout << "Student Name: ";
   std::getline(std::cin, name);
@@ -87,11 +86,11 @@ void StudentCollection::delete_record(int delete_id)
 {
   // call the find_student_record(delete_id) and store the returned value
   int position = find_student_record(delete_id);
-  // TODO if the return value is a positive value then
-  if(position > 0)
+
+  if(position > NOT_FOUND)
   {
-    student_records.erase (student_records.begin () + position);
-    std::cout << std::endl << "the record had been deleted";
+    student_records.erase(student_records.begin () + position);
+    std::cout << std::endl << "the record had been deleted" << std::endl;
   }
 }
 
@@ -103,7 +102,7 @@ void StudentCollection::view_all_records()
   Student aStudent;
   std::cout << std::endl << std::endl << "We have the following student records: " << std::endl;
   // use a loop and call the to_string method to display the records
-  for (size_t looptimes = 0; looptimes < student_records.size(); looptimes++)
+  for(size_t looptimes = 0; looptimes < student_records.size(); looptimes++)
   {
     aStudent = student_records.at(looptimes);
     std::cout << aStudent.to_string() << std::endl; // display the student records
@@ -123,7 +122,7 @@ void StudentCollection::save_all_records()
     for(size_t loop = 0; loop < student_records.size(); loop++)
     {
       output_records = student_records.at(loop);
-      output_file << output_records.to_string();
+      output_file << output_records.to_string() << std::endl;
     }
     std::cout << "The operation is successfully completed!" <<std::endl;
   }

@@ -28,14 +28,13 @@ unsigned display_menu();
 int main()
 {
   std::unique_ptr<Student> myStudent (new Student);
-  unsigned choice = EXIT;  // gets the choice from the user
+  int choice = EXIT;  // gets the choice from the user
   StudentCollection myStudentRecords;
   // load all student entries from the file, create objects, and add them in the collection
   myStudentRecords.load_all_records ();
   do
   {
     choice = display_menu ();
-
     switch (choice)
     {
       case ADD_NEW: // add new record
@@ -48,7 +47,6 @@ int main()
         std::cout << std::endl << "Enter the ID that you want to search: ";
         std::cin >> search_id;
         std::cin.ignore(); // consume the new line character
-
         myStudentRecords.find_student_record (search_id);
         break;
 
@@ -57,7 +55,6 @@ int main()
         myStudentRecords.view_all_records ();
         break;
 
-
       case DELETE: // delete a record
         unsigned delete_id;
         std::cout << std::endl << "Enter the ID that you want to delete: ";
@@ -65,8 +62,7 @@ int main()
         std::cin.ignore(); // consume the new line character
         myStudentRecords.delete_record (delete_id);
         break;
-
-
+        
       case SAVE_ALL: // save all student object entries in a file
         myStudentRecords.save_all_records ();
         std::cout << std::endl << "Success! all records have been saved.";
@@ -77,13 +73,10 @@ int main()
         break;
 
       default:
-        std::cout << "\nInvalid choice. Try again: \n";
+        std::cout << std::endl << "Invalid choice. Try again: " << std::endl;
         break;
     }
-
   } while (choice != EXIT); // exit condition
-
-
   return 0;
 }
 
