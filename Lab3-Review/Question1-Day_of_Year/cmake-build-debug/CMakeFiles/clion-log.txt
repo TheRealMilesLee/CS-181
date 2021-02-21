@@ -1,0 +1,4 @@
+"/Users/leemiles/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug
