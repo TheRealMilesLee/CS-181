@@ -6,12 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/DayOfYear.cpp
-iostream
--
-DayofYear_Class.h
-/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/DayofYear_Class.h
-
 /Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/DayofYear_Class.cpp
 DayofYear_Class.h
 /Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/DayofYear_Class.h

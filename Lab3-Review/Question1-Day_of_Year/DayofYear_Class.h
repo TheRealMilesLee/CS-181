@@ -18,7 +18,7 @@ public:
     DayofYear_Class(int day);
     void setMonth(std::string result_month);
     void setDate(int number_of_day);
-    void conversion(int dayOfYear);
+    void conversion();
     std::string to_string();
     void setDateInTheMonth(int date_inside_month);
 };

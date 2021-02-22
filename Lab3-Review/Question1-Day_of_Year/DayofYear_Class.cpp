@@ -3,18 +3,18 @@
 //
 
 #include "DayofYear_Class.h"
-#include <iostream>
 #include <string>
-#include <vector>
-#include <fstream>
+
 
 DayofYear_Class::DayofYear_Class()
 {
-  
+
 }
 DayofYear_Class::DayofYear_Class(int day)
 {
+
   day_of_year = day;
+  conversion();
 }
 void DayofYear_Class::setDate(int number_of_day)
 {
@@ -25,75 +25,73 @@ void DayofYear_Class::setMonth(std::string result_month)
   month = result_month;
 }
 
-void DayofYear_Class::conversion(int dayOfYear)
+void DayofYear_Class::conversion()
 {
-  DayofYear_Class convensionObject;
-  if(dayOfYear >= 1 && dayOfYear < 32)
+  if(day_of_year >= 1 && day_of_year < 32)
   {
-    convensionObject.setMonth("Janurary");
-    convensionObject.setDateInTheMonth(dayOfYear);
+    setMonth("Janurary");
+    setDateInTheMonth(day_of_year);
   }
-  else if(dayOfYear >= 32 && dayOfYear < 60)
+  else if(day_of_year >= 32 && day_of_year < 60)
   {
-    convensionObject.setMonth("Feburary");
-    convensionObject.setDateInTheMonth(dayOfYear - 31);
+    setMonth("Feburary");
+    setDateInTheMonth(day_of_year - 31);
   }
-  else if(dayOfYear >= 60 && dayOfYear < 91)
+  else if(day_of_year >= 60 && day_of_year < 91)
   {
-    convensionObject.setMonth("March");
-    convensionObject.setDateInTheMonth(dayOfYear - 59);
+    setMonth("March");
+    setDateInTheMonth(day_of_year - 59);
   }
-  else if(dayOfYear >= 91 && dayOfYear < 121)
+  else if(day_of_year >= 91 && day_of_year < 121)
   {
-    convensionObject.setMonth("April");
-    convensionObject.setDateInTheMonth(dayOfYear - 90);
+    setMonth("April");
+    setDateInTheMonth(day_of_year - 90);
   }
-  else if(dayOfYear >= 121 && dayOfYear < 152)
+  else if(day_of_year >= 121 && day_of_year < 152)
   {
-    convensionObject.setMonth("May");
-    convensionObject.setDateInTheMonth(dayOfYear - 120);
+    setMonth("May");
+    setDateInTheMonth(day_of_year - 120);
   }
-  else if(dayOfYear >= 152 && dayOfYear < 182)
+  else if(day_of_year >= 152 && day_of_year < 182)
   {
-    convensionObject.setMonth("June");
-    convensionObject.setDateInTheMonth(dayOfYear - 151);
+    setMonth("June");
+    setDateInTheMonth(day_of_year - 151);
   }
-  else if(dayOfYear >= 182 && dayOfYear < 213)
+  else if(day_of_year >= 182 && day_of_year < 213)
   {
-    convensionObject.setMonth("July");
-    convensionObject.setDateInTheMonth(dayOfYear - 181);
+    setMonth("July");
+    setDateInTheMonth(day_of_year - 181);
   }
-  else if(dayOfYear >= 213 && dayOfYear < 244)
+  else if(day_of_year >= 213 && day_of_year < 244)
   {
-    convensionObject.setMonth("August");
-    convensionObject.setDateInTheMonth(dayOfYear - 212);
+    setMonth("August");
+    setDateInTheMonth(day_of_year - 212);
   }
-  else if(dayOfYear >= 244 && dayOfYear < 273)
+  else if(day_of_year >= 244 && day_of_year < 273)
   {
-    convensionObject.setMonth("September");
-    convensionObject.setDateInTheMonth(dayOfYear - 243);
+    setMonth("September");
+    setDateInTheMonth(day_of_year - 243);
   }
-  else if(dayOfYear >= 273 && dayOfYear < 304)
+  else if(day_of_year >= 273 && day_of_year < 304)
   {
-    convensionObject.setMonth("October");
-    convensionObject.setDateInTheMonth(dayOfYear - 272);
+    setMonth("October");
+    setDateInTheMonth(day_of_year - 272);
   }
-  else if(dayOfYear >= 304 && dayOfYear < 334)
+  else if(day_of_year >= 304 && day_of_year < 334)
   {
-    convensionObject.setMonth("November");
-    convensionObject.setDateInTheMonth(dayOfYear - 303);
+    setMonth("November");
+    setDateInTheMonth(day_of_year - 303);
   }
-  else 
+  else
   {
-    convensionObject.setMonth("December");
-    convensionObject.setDateInTheMonth(dayOfYear - 333);
+    setMonth("December");
+    setDateInTheMonth(day_of_year - 334);
   }
 }
 
 std::string DayofYear_Class::to_string()
 {
-  DayofYear_Class to_string_object;
-  std::string result = to_string_object.month + std::to_string(to_string_object.day_in_the_month);
+  std::string result = month + " " + std::to_string(day_in_the_month);
   return result;
 }
 
