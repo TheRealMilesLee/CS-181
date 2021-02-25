@@ -170,33 +170,6 @@ DayOfYear.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Question1_Day_of_Year.dir/build.make CMakeFiles/Question1_Day_of_Year.dir/DayOfYear.cpp.s
 .PHONY : DayOfYear.cpp.s
 
-DayofYear_Class.o: DayofYear_Class.cpp.o
-
-.PHONY : DayofYear_Class.o
-
-# target to build an object file
-DayofYear_Class.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Question1_Day_of_Year.dir/build.make CMakeFiles/Question1_Day_of_Year.dir/DayofYear_Class.cpp.o
-.PHONY : DayofYear_Class.cpp.o
-
-DayofYear_Class.i: DayofYear_Class.cpp.i
-
-.PHONY : DayofYear_Class.i
-
-# target to preprocess a source file
-DayofYear_Class.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Question1_Day_of_Year.dir/build.make CMakeFiles/Question1_Day_of_Year.dir/DayofYear_Class.cpp.i
-.PHONY : DayofYear_Class.cpp.i
-
-DayofYear_Class.s: DayofYear_Class.cpp.s
-
-.PHONY : DayofYear_Class.s
-
-# target to generate assembly for a file
-DayofYear_Class.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Question1_Day_of_Year.dir/build.make CMakeFiles/Question1_Day_of_Year.dir/DayofYear_Class.cpp.s
-.PHONY : DayofYear_Class.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -209,9 +182,6 @@ help:
 	@echo "... DayOfYear.o"
 	@echo "... DayOfYear.i"
 	@echo "... DayOfYear.s"
-	@echo "... DayofYear_Class.o"
-	@echo "... DayofYear_Class.i"
-	@echo "... DayofYear_Class.s"
 .PHONY : help
 
 

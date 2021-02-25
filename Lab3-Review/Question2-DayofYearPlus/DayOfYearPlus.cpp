@@ -1,15 +1,22 @@
-//
-// Created by NightOwl on 2/20/21.
-//
+#include <iostream>
+#include <vector>
 
-#include "DayofYear_Class.h"
-#include <string>
-
-
-DayofYear_Class::DayofYear_Class()
+class DayofYear_Class
 {
+private:
+    int day_of_year;
+    std::string month;
+    int day_in_the_month;
+public:
+    DayofYear_Class(){};
+    DayofYear_Class(int day);
+    void setMonth(std::string result_month);
+    void setDate(int number_of_day);
+    void conversion();
+    std::string to_string();
+    void setDateInTheMonth(int date_inside_month);
+};
 
-}
 DayofYear_Class::DayofYear_Class(int day)
 {
 
@@ -27,6 +34,7 @@ void DayofYear_Class::setMonth(std::string result_month)
 
 void DayofYear_Class::conversion()
 {
+  std::vector<DayofYear_Class> critical_day;
   if(day_of_year >= 1 && day_of_year < 32)
   {
     setMonth("Janurary");
@@ -97,5 +105,20 @@ std::string DayofYear_Class::to_string()
 
 void DayofYear_Class::setDateInTheMonth(int date_inside_month)
 {
- day_in_the_month = date_inside_month;
+  day_in_the_month = date_inside_month;
 }
+
+int main()
+{
+  int day_of_year;
+  std::cout << "Please input the day of the year: " << std::endl;
+  std::cin >> day_of_year;
+  DayofYear_Class DayofYearObject(day_of_year);
+  std::cout << "Now processing the conversion..." << std::endl;
+
+  std::cout << "The conversion will be: " << DayofYearObject.to_string();
+
+  return 0;
+}
+
+
