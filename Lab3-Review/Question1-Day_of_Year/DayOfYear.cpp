@@ -2,7 +2,7 @@
 #include <vector>
 #include <ctime>
 
-const unsigned TOTAL_DAY_IN_YEAR = 365;
+const unsigned TOTAL_MONTH_IN_YEAR = 12;
 class DayofYear_Class
 {
 private:
@@ -10,49 +10,44 @@ private:
     std::string month;
     int day_in_the_month;
 public:
-    DayofYear_Class();
     DayofYear_Class(int day);
-    void setMonth(std::string result_month);
-    void setDate(int number_of_day);
-    int getDate();
-    std::string getMonth();
     void conversion();
     std::string to_string();
-    void setDateInTheMonth(int date_inside_month);
 };
 
-DayofYear_Class::DayofYear_Class(){}
 DayofYear_Class::DayofYear_Class(int day)
 {
   day_of_year = day;
   conversion();
 }
-void DayofYear_Class::setDate(int number_of_day)
-{
-  day_of_year = number_of_day;
-}
-void DayofYear_Class::setMonth(std::string result_month)
-{
-  month = result_month;
-}
+
 void DayofYear_Class::conversion()
 {
-  std::vector<DayofYear_Class> days_of_year;
-  int initialization_indx = 1;
-  for(size_t loop = 0; loop < TOTAL_DAY_IN_YEAR; loop++)
-  {
-    days_of_year.push_back(initialization_indx);
-    initialization_indx++;
-  }
+  std::vector<int> days_of_month{31, 60, 91, 121, 152, 182, 213, 244, 273, 304, 334, 365};
   std::vector<std::string> NameOfMonth{"January", "February", "March", "April", "May", "June", "July", "August", "September","October", "November", "December"};
-  for(size_t looptimes = 0; looptimes < days_of_year.size(); looptimes++)
+  if(day_of_year <= days_of_month.at(0))
   {
-
-     if(day_of_year == )
-     {
-       month = NameOfMonth.at(looptimes);
-       day_in_the_month = ;
-     }
+    month = NameOfMonth.at(0);
+    day_in_the_month = day_of_year;
+  }
+  else
+  {
+    int compare_indx_front;
+    int compare_indx_back;
+    for(size_t looptimes = 0; looptimes < days_of_month.size(); looptimes++)
+    {
+        compare_indx_front = days_of_month.at(looptimes);
+        compare_indx_back = days_of_month.at(looptimes++);
+        if(day_of_year > compare_indx_front && day_of_year < compare_indx_back)
+        {
+          month = NameOfMonth.at(looptimes++);
+          day_in_the_month = day_of_year - compare_indx_front;
+        }
+        else
+        {
+          std::cout << "Something goes wrong..";
+        }
+    }
   }
 }
 
@@ -62,10 +57,7 @@ std::string DayofYear_Class::to_string()
   return result;
 }
 
-void DayofYear_Class::setDateInTheMonth(int date_inside_month)
-{
-  day_in_the_month = date_inside_month;
-}
+
 
 int main()
 {
