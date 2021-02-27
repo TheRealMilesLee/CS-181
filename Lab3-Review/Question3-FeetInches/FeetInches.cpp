@@ -17,13 +17,13 @@ private:
 public:
     explicit FeetInches(int feet_param = 0, int inches_param = 0);
     void simplify();
-    FeetInches operator+(const FeetInches &) const; // Overloaded +
-    FeetInches operator-(const FeetInches &) const; // Overloaded -
-    FeetInches operator++();                  // Prefix ++
-    FeetInches operator++(int);               // Postfix ++
-    bool operator>(const FeetInches &) const;       // Overloaded >
-    bool operator<(const FeetInches &) const;       // Overloaded <
-    bool operator==(const FeetInches &) const;      // Overloaded ==
+    FeetInches operator+(const FeetInches &) const;
+    FeetInches operator-(const FeetInches &) const;
+    FeetInches operator++();
+    FeetInches operator++(int);
+    bool operator>(const FeetInches &) const;
+    bool operator<(const FeetInches &) const;
+    bool operator==(const FeetInches &) const;
     friend ostream &operator<<(ostream &, const FeetInches &);
     friend istream &operator>>(istream &, FeetInches &);
 };
@@ -33,16 +33,6 @@ FeetInches::FeetInches(int feet_param, int inches_param)
   inches = inches_param;
   simplify();
 }
-//************************************************************
-// Definition of member function simplify. This function      *
-// checks for values in the inches member greater than       *
-// twelve or less than zero. If such a value is found,       *
-// the numbers in feet and inches are adjusted to conform    *
-// to a standard feet & inches expression. For example,      *
-// 3 feet 14 inches would be adjusted to 4 feet 2 inches and *
-// 5 feet -2 inches would be adjusted to 4 feet 10 inches.   *
-//************************************************************
-
 void FeetInches::simplify()
 {
   if (inches >= 12)
@@ -56,7 +46,6 @@ void FeetInches::simplify()
     inches = 12 - (abs(inches) % 12);
   }
 }
-
 FeetInches FeetInches::operator+(const FeetInches &right) const
 {
   FeetInches temp;
@@ -150,17 +139,13 @@ istream &operator>>(istream &strm, FeetInches &obj)
 int main()
 {
   FeetInches first;
-  FeetInches second;  // Define two objects.
+  FeetInches second;
 
-  // Get a distance for the first object.
   cout << "Enter a distance in feet and inches." << endl;
   cin >> first;
-
-  // Get a distance for the second object.
   cout << "Enter another distance in feet and inches." << endl;
   cin >> second;
 
-  // Display the values in the objects.
   cout << "The values you entered are: " << endl;
   cout << first << " and " << second << endl;
   return 0;
