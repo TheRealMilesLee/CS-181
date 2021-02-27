@@ -77,27 +77,27 @@ include CMakeFiles/Question3_FeetInches.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Question3_FeetInches.dir/flags.make
 
-CMakeFiles/Question3_FeetInches.dir/main.cpp.o: CMakeFiles/Question3_FeetInches.dir/flags.make
-CMakeFiles/Question3_FeetInches.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question3-FeetInches/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Question3_FeetInches.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Question3_FeetInches.dir/main.cpp.o -c /Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question3-FeetInches/main.cpp
+CMakeFiles/Question3_FeetInches.dir/FeetInches.cpp.o: CMakeFiles/Question3_FeetInches.dir/flags.make
+CMakeFiles/Question3_FeetInches.dir/FeetInches.cpp.o: ../FeetInches.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question3-FeetInches/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Question3_FeetInches.dir/FeetInches.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Question3_FeetInches.dir/FeetInches.cpp.o -c /Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question3-FeetInches/FeetInches.cpp
 
-CMakeFiles/Question3_FeetInches.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Question3_FeetInches.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question3-FeetInches/main.cpp > CMakeFiles/Question3_FeetInches.dir/main.cpp.i
+CMakeFiles/Question3_FeetInches.dir/FeetInches.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Question3_FeetInches.dir/FeetInches.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question3-FeetInches/FeetInches.cpp > CMakeFiles/Question3_FeetInches.dir/FeetInches.cpp.i
 
-CMakeFiles/Question3_FeetInches.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Question3_FeetInches.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question3-FeetInches/main.cpp -o CMakeFiles/Question3_FeetInches.dir/main.cpp.s
+CMakeFiles/Question3_FeetInches.dir/FeetInches.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Question3_FeetInches.dir/FeetInches.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question3-FeetInches/FeetInches.cpp -o CMakeFiles/Question3_FeetInches.dir/FeetInches.cpp.s
 
 # Object files for target Question3_FeetInches
 Question3_FeetInches_OBJECTS = \
-"CMakeFiles/Question3_FeetInches.dir/main.cpp.o"
+"CMakeFiles/Question3_FeetInches.dir/FeetInches.cpp.o"
 
 # External object files for target Question3_FeetInches
 Question3_FeetInches_EXTERNAL_OBJECTS =
 
-Question3_FeetInches: CMakeFiles/Question3_FeetInches.dir/main.cpp.o
+Question3_FeetInches: CMakeFiles/Question3_FeetInches.dir/FeetInches.cpp.o
 Question3_FeetInches: CMakeFiles/Question3_FeetInches.dir/build.make
 Question3_FeetInches: CMakeFiles/Question3_FeetInches.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question3-FeetInches/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Question3_FeetInches"

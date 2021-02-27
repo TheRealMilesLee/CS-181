@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question3-FeetInches/FeetInches.cpp" "/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question3-FeetInches/cmake-build-debug/CMakeFiles/Question3_FeetInches.dir/FeetInches.cpp.o"
+  "/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/test/main.cpp" "/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/test/cmake-build-debug/CMakeFiles/test.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

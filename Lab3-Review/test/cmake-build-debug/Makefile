@@ -68,10 +68,10 @@ RM = "/Users/leemiles/Library/Application Support/JetBrains/Toolbox/apps/CLion/c
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question3-FeetInches
+CMAKE_SOURCE_DIR = /Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/test
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question3-FeetInches/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/test/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question3-FeetInches/cmake-build-debug/CMakeFiles /Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question3-FeetInches/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/test/cmake-build-debug/CMakeFiles /Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/test/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question3-FeetInches/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/test/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -131,44 +131,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Question3_FeetInches
+# Target rules for targets named test
 
 # Build rule for target.
-Question3_FeetInches: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Question3_FeetInches
-.PHONY : Question3_FeetInches
+test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test
+.PHONY : test
 
 # fast build rule for target.
-Question3_FeetInches/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Question3_FeetInches.dir/build.make CMakeFiles/Question3_FeetInches.dir/build
-.PHONY : Question3_FeetInches/fast
+test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
+.PHONY : test/fast
 
-FeetInches.o: FeetInches.cpp.o
+main.o: main.cpp.o
 
-.PHONY : FeetInches.o
+.PHONY : main.o
 
 # target to build an object file
-FeetInches.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Question3_FeetInches.dir/build.make CMakeFiles/Question3_FeetInches.dir/FeetInches.cpp.o
-.PHONY : FeetInches.cpp.o
+main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/main.cpp.o
+.PHONY : main.cpp.o
 
-FeetInches.i: FeetInches.cpp.i
+main.i: main.cpp.i
 
-.PHONY : FeetInches.i
+.PHONY : main.i
 
 # target to preprocess a source file
-FeetInches.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Question3_FeetInches.dir/build.make CMakeFiles/Question3_FeetInches.dir/FeetInches.cpp.i
-.PHONY : FeetInches.cpp.i
+main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-FeetInches.s: FeetInches.cpp.s
+main.s: main.cpp.s
 
-.PHONY : FeetInches.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-FeetInches.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Question3_FeetInches.dir/build.make CMakeFiles/Question3_FeetInches.dir/FeetInches.cpp.s
-.PHONY : FeetInches.cpp.s
+main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -178,10 +178,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... Question3_FeetInches"
-	@echo "... FeetInches.o"
-	@echo "... FeetInches.i"
-	@echo "... FeetInches.s"
+	@echo "... test"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

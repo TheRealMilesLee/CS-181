@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question2-DayofYearPlus/DayOfYearPlus.cpp
+iostream
+-
+vector
+-
+

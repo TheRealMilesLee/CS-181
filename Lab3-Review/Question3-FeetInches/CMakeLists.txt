@@ -3,4 +3,4 @@ project(Question3_FeetInches)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(Question3_FeetInches main.cpp)
+add_executable(Question3_FeetInches FeetInches.cpp)
