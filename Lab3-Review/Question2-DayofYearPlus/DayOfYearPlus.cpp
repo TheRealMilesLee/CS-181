@@ -3,6 +3,7 @@
 //This Program Created by Hengyi Li on 8:15 PM, Feb 26, 2021
 //This Program has been modify by Hengyi Li on 12:40 PM, Feb 27, 2021.
 //Copyright @ 2021 Hengyi Li. All rights reserved.
+
 #include <iostream>
 #include <vector>
 
@@ -13,20 +14,42 @@ private:
     std::string month;
     int day_in_the_month;
 public:
+    /**
+     * This is a constructor that accepts a parameter from the user input
+     */
     DayofYear_Class(int day);
+
+    /**
+     * This function is to overload the ++ operator.
+     * @return the postfix ++ overload result.
+     */
     DayofYear_Class operator++(int)
     {
       day_of_year++;
       DayofYear_Class postfix_plus(day_of_year);
        return postfix_plus;
     }
+
+    /**
+     * This function is to overload the -- operator.
+     * @return the -- operator result.
+     */
     DayofYear_Class operator--(int)
     {
       day_of_year--;
       DayofYear_Class postfix_minus(day_of_year);
       return postfix_minus;
     }
+
+    /**
+     * This function is to do the day-date conversion.
+     */
     void conversion();
+
+    /**
+     * This function is to output everything.
+     * @return the format of month-date.
+     */
     std::string to_string();
 };
 DayofYear_Class::DayofYear_Class(int day)
