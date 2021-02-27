@@ -12,8 +12,8 @@ istream &operator>>(istream &, FeetInches &);
 class FeetInches
 {
 private:
-    int feet;        // To hold a number of feet
-    int inches;      // To hold a number of inches
+    int feet;
+    int inches;
 public:
     explicit FeetInches(int feet_param = 0, int inches_param = 0);
     void simplify();
@@ -21,9 +21,10 @@ public:
     FeetInches operator-(const FeetInches &) const;
     FeetInches operator++();
     FeetInches operator++(int);
-    bool operator>(const FeetInches &) const;
-    bool operator<(const FeetInches &) const;
+    bool operator>=(const FeetInches &) const;
+    bool operator<=(const FeetInches &) const;
     bool operator==(const FeetInches &) const;
+    bool operator!=(const FeetInches &) const;
     friend ostream &operator<<(ostream &, const FeetInches &);
     friend istream &operator>>(istream &, FeetInches &);
 };
@@ -73,19 +74,14 @@ FeetInches FeetInches::operator++()
 FeetInches FeetInches::operator++(int)
 {
   FeetInches temp(feet, inches);
-
   inches++;
   simplify();
   return temp;
 }
-bool FeetInches::operator>(const FeetInches &right) const
+bool FeetInches::operator>=(const FeetInches &right) const
 {
   bool status;
-  if (feet > right.feet)
-  {
-    status = true;
-  }
-  else if (feet == right.feet && inches > right.inches)
+  if (feet >= right.feet)
   {
     status = true;
   }
@@ -93,19 +89,34 @@ bool FeetInches::operator>(const FeetInches &right) const
   {
     status = false;
   }
-
   return status;
 }
-bool FeetInches::operator<(const FeetInches &right) const
+
+bool FeetInches::operator<=(const FeetInches &right) const
 {
   bool status;
-  if (feet < right.feet)
+  if (feet <= right.feet)
+  {
     status = true;
-  else if (feet == right.feet && inches < right.inches)
-    status = true;
+  }
   else
+  {
     status = false;
+  }
+  return status;
+}
 
+bool FeetInches::operator!=(const FeetInches &right) const
+{
+  bool status;
+  if (feet != right.feet && inches != right.inches)
+  {
+    status = true;
+  }
+  else
+  {
+    status = false;
+  }
   return status;
 }
 bool FeetInches::operator==(const FeetInches &right) const
@@ -148,5 +159,42 @@ int main()
 
   cout << "The values you entered are: " << endl;
   cout << first << " and " << second << endl;
+
+  if(first == second)
+  {
+    cout << "The first is equal to second" << endl;
+  }
+  else if(first != second && first >= second)
+  {
+    cout << "The first is not equal to second, but greater than or equal to second" << endl;
+  }
+  else if(first != second && first <= second)
+  {
+    cout << "The first is not equal to second, but less than or equal to second" << endl;
+  }
+  else
+  {
+    cout << "Error, this could not be exist!";
+  }
+
+  FeetInches third = first + second;
+  cout << "The combination of first and second is: " << third << endl;
+
+  FeetInches fourth = first - second;
+  cout << "The result of first minus second is: " << fourth << endl;
+
+  // Use the prefix ++ operator.
+  cout << "Demonstrating prefix ++ operator" << endl;
+  first = ++second;
+  cout << "first: " << first << endl;
+  cout << "second: " << second << endl;
+
+  // Use the postfix ++ operator.
+  cout << endl << "Demonstrating postfix ++ operator" << endl;
+  first = second++;
+  cout << "first: " << first << endl;
+  cout << "second: " << second << endl;
+
+  
   return 0;
 }
