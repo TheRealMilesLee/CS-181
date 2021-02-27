@@ -1,3 +1,8 @@
+//Hengyi Li
+//This is a Day-Year Convension Program
+//This Program Created by Hengyi Li on 8:15 PM, Feb 26, 2021
+//This Program has been modify by Hengyi Li on 12:40 PM, Feb 27, 2021.
+//Copyright @ 2021 Hengyi Li. All rights reserved.
 #include <iostream>
 #include <vector>
 

@@ -1,3 +1,9 @@
+//Hengyi Li
+//This is a Day-Year Convension Program
+//This Program Created by Hengyi Li on 10:15 PM, Feb 25, 2021
+//This Program has been modify by Hengyi Li on 12:40 PM, Feb 27, 2021.
+//Copyright @ 2021 Hengyi Li. All rights reserved.
+
 #include <iostream>
 #include <vector>
 
@@ -8,8 +14,21 @@ private:
     std::string month;
     int day_in_the_month;
 public:
+    /**
+     * This is Constructor that accepts a parameter from the user input
+     * @param day is the number of day in the year.
+     */
     DayofYear_Class(int day);
+
+    /**
+     * This function is to do the day in the year-date in the month/day format.
+     */
     void conversion();
+
+    /**
+     * This functio is just to formatting the output
+     * @return a string value that has MONTH, DATE.
+     */
     std::string to_string();
 };
 
@@ -45,11 +64,16 @@ std::string DayofYear_Class::to_string()
 
 int main()
 {
+  //Get the user input
   int day_of_year;
   std::cout << "Please input the day of the year: " << std::endl;
   std::cin >> day_of_year;
   DayofYear_Class DayofYearObject(day_of_year);
+
+  //day-date convention happens in here...
   std::cout << "Now processing the conversion..." << std::endl;
+
+  //output everything
   std::cout << "The conversion will be: " << DayofYearObject.to_string();
 
   return 0;

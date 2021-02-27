@@ -1,3 +1,9 @@
+//Hengyi Li
+//This is a Inches-Feet Convension Program
+//This Program Created by Hengyi Li on 12:00 AM, Feb 27, 2021
+//This Program has been modify by Hengyi Li on 12:40 PM, Feb 27, 2021.
+//Copyright @ 2021 Hengyi Li. All rights reserved.
+
 #include <iostream>
 #include <cstdlib>
 
@@ -14,14 +20,11 @@ private:
     int feet;
     int inches;
 public:
-    explicit FeetInches(int feet_param = 0, int inches_param = 0);
+    FeetInches(int feet_param = 0, int inches_param = 0);
+    FeetInches (const FeetInches &param);
     void simplify();
     FeetInches operator+(const FeetInches &) const;
     FeetInches operator-(const FeetInches &) const;
-    FeetInches operator++();
-    FeetInches operator++(int);
-    FeetInches operator--();
-    FeetInches operator--(int);
     bool operator>=(const FeetInches &) const;
     bool operator<=(const FeetInches &) const;
     bool operator==(const FeetInches &) const;
@@ -34,6 +37,11 @@ FeetInches::FeetInches(int feet_param, int inches_param)
   feet = feet_param;
   inches = inches_param;
   simplify();
+}
+FeetInches::FeetInches(const FeetInches &param)
+{
+  feet = param.feet;
+  inches = param.inches;
 }
 void FeetInches::simplify()
 {
@@ -66,41 +74,10 @@ FeetInches FeetInches::operator-(const FeetInches &right) const
   temp.simplify();
   return temp;
 }
-FeetInches FeetInches::operator++()
-{
-  ++inches;
-  ++feet;
-  simplify();
-  return *this;
-}
-FeetInches FeetInches::operator++(int)
-{
-
-  feet++;
-  inches++;
-  FeetInches temp(feet, inches);
-  simplify();
-  return temp;
-}
-FeetInches FeetInches::operator--()
-{
-  --inches;
-  --feet;
-  simplify();
-  return *this;
-}
-FeetInches FeetInches::operator--(int)
-{
-  feet--;
-  inches--;
-  FeetInches temp(feet, inches);
-  simplify();
-  return temp;
-}
 bool FeetInches::operator>=(const FeetInches &right) const
 {
   bool status;
-  if (feet >= right.feet && inches >= right.inches)
+  if (feet >= right.feet)
   {
     status = true;
   }
@@ -114,7 +91,7 @@ bool FeetInches::operator>=(const FeetInches &right) const
 bool FeetInches::operator<=(const FeetInches &right) const
 {
   bool status;
-  if (feet <= right.feet && inches <= right.inches)
+  if (feet <= right.feet)
   {
     status = true;
   }
@@ -185,15 +162,15 @@ int main()
   }
   else if(first != second && first >= second)
   {
-    cout << "The first is not equal to second, but greater than or equal to second" << endl;
+    cout << "The first is not equal to second, but the feet of first is greater than or equal to second" << endl;
   }
   else if(first != second && first <= second)
   {
-    cout << "The first is not equal to second, but less than or equal to second" << endl;
+    cout << "The first is not equal to second, but the feet of first is less than or equal to second" << endl;
   }
   else
   {
-    cout << "Error, this could not be exist!";
+    cout << "Error, this could not be exist!" << endl;
   }
 
   FeetInches third = first + second;
@@ -202,28 +179,5 @@ int main()
   FeetInches fourth = first - second;
   cout << "The result of first minus second is: " << fourth << endl;
 
-  // Use the prefix ++ operator.
-  cout << endl << "Demonstrating prefix ++ operator" << endl;
-  first = ++second;
-  cout << "first: " << first << endl;
-  cout << "second: " << second << endl;
-
-  // Use the postfix ++ operator.
-  cout << endl << "Demonstrating postfix ++ operator" << endl;
-  first = second++;
-  cout << "first: " << first << endl;
-  cout << "second: " << second << endl;
-  // Use the prefix -- operator.
-  cout << endl << "Demonstrating prefix -- operator" << endl;
-  first = --second;
-  cout << "first: " << first << endl;
-  cout << "second: " << second << endl;
-
-  // Use the postfix -- operator.
-  cout << endl << "Demonstrating postfix -- operator" << endl;
-  first = second--;
-  cout << "first: " << first << endl;
-  cout << "second: " << second << endl;
-  
   return 0;
 }
