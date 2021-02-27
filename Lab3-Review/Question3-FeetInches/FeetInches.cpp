@@ -3,9 +3,8 @@
 
 using namespace std;
 
-class FeetInches; // Forward Declaration
+class FeetInches;
 
-// Function Prototypes for Overloaded Stream Operators
 ostream &operator<<(ostream &, const FeetInches &);
 istream &operator>>(istream &, FeetInches &);
 
@@ -21,6 +20,8 @@ public:
     FeetInches operator-(const FeetInches &) const;
     FeetInches operator++();
     FeetInches operator++(int);
+    FeetInches operator--();
+    FeetInches operator--(int);
     bool operator>=(const FeetInches &) const;
     bool operator<=(const FeetInches &) const;
     bool operator==(const FeetInches &) const;
@@ -68,20 +69,38 @@ FeetInches FeetInches::operator-(const FeetInches &right) const
 FeetInches FeetInches::operator++()
 {
   ++inches;
+  ++feet;
   simplify();
   return *this;
 }
 FeetInches FeetInches::operator++(int)
 {
-  FeetInches temp(feet, inches);
+
+  feet++;
   inches++;
+  FeetInches temp(feet, inches);
+  simplify();
+  return temp;
+}
+FeetInches FeetInches::operator--()
+{
+  --inches;
+  --feet;
+  simplify();
+  return *this;
+}
+FeetInches FeetInches::operator--(int)
+{
+  feet--;
+  inches--;
+  FeetInches temp(feet, inches);
   simplify();
   return temp;
 }
 bool FeetInches::operator>=(const FeetInches &right) const
 {
   bool status;
-  if (feet >= right.feet)
+  if (feet >= right.feet && inches >= right.inches)
   {
     status = true;
   }
@@ -95,7 +114,7 @@ bool FeetInches::operator>=(const FeetInches &right) const
 bool FeetInches::operator<=(const FeetInches &right) const
 {
   bool status;
-  if (feet <= right.feet)
+  if (feet <= right.feet && inches <= right.inches)
   {
     status = true;
   }
@@ -132,20 +151,20 @@ bool FeetInches::operator==(const FeetInches &right) const
   }
   return status;
 }
-ostream &operator<<(ostream &strm, const FeetInches &obj)
+ostream &operator<<(ostream &stream_insertion, const FeetInches &obj)
 {
-  strm << obj.feet << " feet, " << obj.inches << " inches";
-  return strm;
+  stream_insertion << obj.feet << " feet, " << obj.inches << " inches";
+  return stream_insertion;
 }
-istream &operator>>(istream &strm, FeetInches &obj)
+istream &operator>>(istream &stream_extraction, FeetInches &obj)
 {
   cout << "Feet: ";
-  strm >> obj.feet;
+  stream_extraction >> obj.feet;
   cout << "Inches: ";
-  strm >> obj.inches;
+  stream_extraction >> obj.inches;
 
   obj.simplify();
-  return strm;
+  return stream_extraction;
 }
 int main()
 {
@@ -184,7 +203,7 @@ int main()
   cout << "The result of first minus second is: " << fourth << endl;
 
   // Use the prefix ++ operator.
-  cout << "Demonstrating prefix ++ operator" << endl;
+  cout << endl << "Demonstrating prefix ++ operator" << endl;
   first = ++second;
   cout << "first: " << first << endl;
   cout << "second: " << second << endl;
@@ -194,7 +213,17 @@ int main()
   first = second++;
   cout << "first: " << first << endl;
   cout << "second: " << second << endl;
+  // Use the prefix -- operator.
+  cout << endl << "Demonstrating prefix -- operator" << endl;
+  first = --second;
+  cout << "first: " << first << endl;
+  cout << "second: " << second << endl;
 
+  // Use the postfix -- operator.
+  cout << endl << "Demonstrating postfix -- operator" << endl;
+  first = second--;
+  cout << "first: " << first << endl;
+  cout << "second: " << second << endl;
   
   return 0;
 }
