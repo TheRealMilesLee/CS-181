@@ -34,7 +34,7 @@ public:
 
 DayofYear_Class::DayofYear_Class(int day)
 {
-  day_of_year = day;
+  day_of_year = day;                                                                                                                        q
   conversion();
 }
 
