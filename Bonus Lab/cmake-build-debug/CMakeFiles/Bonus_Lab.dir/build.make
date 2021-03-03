@@ -77,27 +77,27 @@ include CMakeFiles/Bonus_Lab.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Bonus_Lab.dir/flags.make
 
-CMakeFiles/Bonus_Lab.dir/ProgrammingChallenge_DateClass.cpp.o: CMakeFiles/Bonus_Lab.dir/flags.make
-CMakeFiles/Bonus_Lab.dir/ProgrammingChallenge_DateClass.cpp.o: ../ProgrammingChallenge_DateClass.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Bonus Lab/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Bonus_Lab.dir/ProgrammingChallenge_DateClass.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Bonus_Lab.dir/ProgrammingChallenge_DateClass.cpp.o -c "/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Bonus Lab/ProgrammingChallenge_DateClass.cpp"
+CMakeFiles/Bonus_Lab.dir/CircleClass.cpp.o: CMakeFiles/Bonus_Lab.dir/flags.make
+CMakeFiles/Bonus_Lab.dir/CircleClass.cpp.o: ../CircleClass.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Bonus Lab/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Bonus_Lab.dir/CircleClass.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Bonus_Lab.dir/CircleClass.cpp.o -c "/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Bonus Lab/CircleClass.cpp"
 
-CMakeFiles/Bonus_Lab.dir/ProgrammingChallenge_DateClass.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Bonus_Lab.dir/ProgrammingChallenge_DateClass.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Bonus Lab/ProgrammingChallenge_DateClass.cpp" > CMakeFiles/Bonus_Lab.dir/ProgrammingChallenge_DateClass.cpp.i
+CMakeFiles/Bonus_Lab.dir/CircleClass.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Bonus_Lab.dir/CircleClass.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Bonus Lab/CircleClass.cpp" > CMakeFiles/Bonus_Lab.dir/CircleClass.cpp.i
 
-CMakeFiles/Bonus_Lab.dir/ProgrammingChallenge_DateClass.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Bonus_Lab.dir/ProgrammingChallenge_DateClass.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Bonus Lab/ProgrammingChallenge_DateClass.cpp" -o CMakeFiles/Bonus_Lab.dir/ProgrammingChallenge_DateClass.cpp.s
+CMakeFiles/Bonus_Lab.dir/CircleClass.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Bonus_Lab.dir/CircleClass.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Bonus Lab/CircleClass.cpp" -o CMakeFiles/Bonus_Lab.dir/CircleClass.cpp.s
 
 # Object files for target Bonus_Lab
 Bonus_Lab_OBJECTS = \
-"CMakeFiles/Bonus_Lab.dir/ProgrammingChallenge_DateClass.cpp.o"
+"CMakeFiles/Bonus_Lab.dir/CircleClass.cpp.o"
 
 # External object files for target Bonus_Lab
 Bonus_Lab_EXTERNAL_OBJECTS =
 
-Bonus_Lab: CMakeFiles/Bonus_Lab.dir/ProgrammingChallenge_DateClass.cpp.o
+Bonus_Lab: CMakeFiles/Bonus_Lab.dir/CircleClass.cpp.o
 Bonus_Lab: CMakeFiles/Bonus_Lab.dir/build.make
 Bonus_Lab: CMakeFiles/Bonus_Lab.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Bonus Lab/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Bonus_Lab"
