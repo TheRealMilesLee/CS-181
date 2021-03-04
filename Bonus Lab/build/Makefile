@@ -142,32 +142,32 @@ Bonus_Lab/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bonus_Lab.dir/build.make CMakeFiles/Bonus_Lab.dir/build
 .PHONY : Bonus_Lab/fast
 
-ProgrammingChallenge_RetailItem_Class.o: ProgrammingChallenge_RetailItem_Class.cpp.o
+ProgrammingChallenges_Circle.o: ProgrammingChallenges_Circle.cpp.o
 
-.PHONY : ProgrammingChallenge_RetailItem_Class.o
+.PHONY : ProgrammingChallenges_Circle.o
 
 # target to build an object file
-ProgrammingChallenge_RetailItem_Class.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bonus_Lab.dir/build.make CMakeFiles/Bonus_Lab.dir/ProgrammingChallenge_RetailItem_Class.cpp.o
-.PHONY : ProgrammingChallenge_RetailItem_Class.cpp.o
+ProgrammingChallenges_Circle.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bonus_Lab.dir/build.make CMakeFiles/Bonus_Lab.dir/ProgrammingChallenges_Circle.cpp.o
+.PHONY : ProgrammingChallenges_Circle.cpp.o
 
-ProgrammingChallenge_RetailItem_Class.i: ProgrammingChallenge_RetailItem_Class.cpp.i
+ProgrammingChallenges_Circle.i: ProgrammingChallenges_Circle.cpp.i
 
-.PHONY : ProgrammingChallenge_RetailItem_Class.i
+.PHONY : ProgrammingChallenges_Circle.i
 
 # target to preprocess a source file
-ProgrammingChallenge_RetailItem_Class.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bonus_Lab.dir/build.make CMakeFiles/Bonus_Lab.dir/ProgrammingChallenge_RetailItem_Class.cpp.i
-.PHONY : ProgrammingChallenge_RetailItem_Class.cpp.i
+ProgrammingChallenges_Circle.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bonus_Lab.dir/build.make CMakeFiles/Bonus_Lab.dir/ProgrammingChallenges_Circle.cpp.i
+.PHONY : ProgrammingChallenges_Circle.cpp.i
 
-ProgrammingChallenge_RetailItem_Class.s: ProgrammingChallenge_RetailItem_Class.cpp.s
+ProgrammingChallenges_Circle.s: ProgrammingChallenges_Circle.cpp.s
 
-.PHONY : ProgrammingChallenge_RetailItem_Class.s
+.PHONY : ProgrammingChallenges_Circle.s
 
 # target to generate assembly for a file
-ProgrammingChallenge_RetailItem_Class.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bonus_Lab.dir/build.make CMakeFiles/Bonus_Lab.dir/ProgrammingChallenge_RetailItem_Class.cpp.s
-.PHONY : ProgrammingChallenge_RetailItem_Class.cpp.s
+ProgrammingChallenges_Circle.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bonus_Lab.dir/build.make CMakeFiles/Bonus_Lab.dir/ProgrammingChallenges_Circle.cpp.s
+.PHONY : ProgrammingChallenges_Circle.cpp.s
 
 # Help Target
 help:
@@ -178,9 +178,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Bonus_Lab"
-	@echo "... ProgrammingChallenge_RetailItem_Class.o"
-	@echo "... ProgrammingChallenge_RetailItem_Class.i"
-	@echo "... ProgrammingChallenge_RetailItem_Class.s"
+	@echo "... ProgrammingChallenges_Circle.o"
+	@echo "... ProgrammingChallenges_Circle.i"
+	@echo "... ProgrammingChallenges_Circle.s"
 .PHONY : help
 
 

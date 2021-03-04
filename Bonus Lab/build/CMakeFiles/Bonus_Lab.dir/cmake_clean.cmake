@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "Bonus_Lab"
   "Bonus_Lab.pdb"
-  "CMakeFiles/Bonus_Lab.dir/ProgrammingChallenge_RetailItem_Class.cpp.o"
+  "CMakeFiles/Bonus_Lab.dir/ProgrammingChallenges_Circle.cpp.o"
 )
 
 # Per-language clean rules from dependency scanning.
