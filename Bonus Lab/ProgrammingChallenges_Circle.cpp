@@ -1,22 +1,33 @@
 #include <iostream>
-
+//Declear ahead
 class Circle;
-
 std::ostream &operator<<(std::ostream &, const Circle &);
-std::istream &operator>>(std::istream &, Circle &);
-
 class Circle
 {
 private:
     double radius;
 public:
+    /**
+     * This constructor initialize tha radius variable to 0
+     * and accepts a parameter that assign tha value to the radius variable.
+     * @param radi is the value that assigned to the radius variable
+     */
     Circle(double radi)
     {
       radius = 0;
       radius = radi;
     }
+
+    /**
+     * This is a friend function that overload the << operator
+     * @return the overload result
+     */
     friend std::ostream &operator<<(std::ostream &, const Circle &);
-    friend std::istream &operator>>(std::istream &, Circle &);
+
+    /**
+     * This function overloaded the double operator
+     * @return a double result
+     */
     operator double()
     {
       const double PI = 3.1416;
@@ -24,16 +35,10 @@ public:
       return result;
     }
 };
-
 std::ostream &operator<<(std::ostream &stream_insertion, const Circle &obj)
 {
   stream_insertion << obj.radius;
   return stream_insertion;
-}
-std::istream &operator>>(std::istream &stream_extraction, Circle &obj)
-{
-  stream_extraction >> obj.radius;
-  return stream_extraction;
 }
 int main()
 {

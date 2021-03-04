@@ -142,32 +142,32 @@ Bonus_Lab/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bonus_Lab.dir/build.make CMakeFiles/Bonus_Lab.dir/build
 .PHONY : Bonus_Lab/fast
 
-ProgrammingChallenge_DateClass.o: ProgrammingChallenge_DateClass.cpp.o
+ProgrammingChallenge_RetailItem_Class.o: ProgrammingChallenge_RetailItem_Class.cpp.o
 
-.PHONY : ProgrammingChallenge_DateClass.o
+.PHONY : ProgrammingChallenge_RetailItem_Class.o
 
 # target to build an object file
-ProgrammingChallenge_DateClass.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bonus_Lab.dir/build.make CMakeFiles/Bonus_Lab.dir/ProgrammingChallenge_DateClass.cpp.o
-.PHONY : ProgrammingChallenge_DateClass.cpp.o
+ProgrammingChallenge_RetailItem_Class.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bonus_Lab.dir/build.make CMakeFiles/Bonus_Lab.dir/ProgrammingChallenge_RetailItem_Class.cpp.o
+.PHONY : ProgrammingChallenge_RetailItem_Class.cpp.o
 
-ProgrammingChallenge_DateClass.i: ProgrammingChallenge_DateClass.cpp.i
+ProgrammingChallenge_RetailItem_Class.i: ProgrammingChallenge_RetailItem_Class.cpp.i
 
-.PHONY : ProgrammingChallenge_DateClass.i
+.PHONY : ProgrammingChallenge_RetailItem_Class.i
 
 # target to preprocess a source file
-ProgrammingChallenge_DateClass.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bonus_Lab.dir/build.make CMakeFiles/Bonus_Lab.dir/ProgrammingChallenge_DateClass.cpp.i
-.PHONY : ProgrammingChallenge_DateClass.cpp.i
+ProgrammingChallenge_RetailItem_Class.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bonus_Lab.dir/build.make CMakeFiles/Bonus_Lab.dir/ProgrammingChallenge_RetailItem_Class.cpp.i
+.PHONY : ProgrammingChallenge_RetailItem_Class.cpp.i
 
-ProgrammingChallenge_DateClass.s: ProgrammingChallenge_DateClass.cpp.s
+ProgrammingChallenge_RetailItem_Class.s: ProgrammingChallenge_RetailItem_Class.cpp.s
 
-.PHONY : ProgrammingChallenge_DateClass.s
+.PHONY : ProgrammingChallenge_RetailItem_Class.s
 
 # target to generate assembly for a file
-ProgrammingChallenge_DateClass.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bonus_Lab.dir/build.make CMakeFiles/Bonus_Lab.dir/ProgrammingChallenge_DateClass.cpp.s
-.PHONY : ProgrammingChallenge_DateClass.cpp.s
+ProgrammingChallenge_RetailItem_Class.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bonus_Lab.dir/build.make CMakeFiles/Bonus_Lab.dir/ProgrammingChallenge_RetailItem_Class.cpp.s
+.PHONY : ProgrammingChallenge_RetailItem_Class.cpp.s
 
 # Help Target
 help:
@@ -178,9 +178,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Bonus_Lab"
-	@echo "... ProgrammingChallenge_DateClass.o"
-	@echo "... ProgrammingChallenge_DateClass.i"
-	@echo "... ProgrammingChallenge_DateClass.s"
+	@echo "... ProgrammingChallenge_RetailItem_Class.o"
+	@echo "... ProgrammingChallenge_RetailItem_Class.i"
+	@echo "... ProgrammingChallenge_RetailItem_Class.s"
 .PHONY : help
 
 

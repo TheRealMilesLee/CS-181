@@ -143,32 +143,32 @@ Bonus_Lab/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bonus_Lab.dir/build.make CMakeFiles/Bonus_Lab.dir/build
 .PHONY : Bonus_Lab/fast
 
-CircleClass.o: CircleClass.cpp.o
+ProgrammingChallenge_DateClass.o: ProgrammingChallenge_DateClass.cpp.o
 
-.PHONY : CircleClass.o
+.PHONY : ProgrammingChallenge_DateClass.o
 
 # target to build an object file
-CircleClass.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bonus_Lab.dir/build.make CMakeFiles/Bonus_Lab.dir/CircleClass.cpp.o
-.PHONY : CircleClass.cpp.o
+ProgrammingChallenge_DateClass.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bonus_Lab.dir/build.make CMakeFiles/Bonus_Lab.dir/ProgrammingChallenge_DateClass.cpp.o
+.PHONY : ProgrammingChallenge_DateClass.cpp.o
 
-CircleClass.i: CircleClass.cpp.i
+ProgrammingChallenge_DateClass.i: ProgrammingChallenge_DateClass.cpp.i
 
-.PHONY : CircleClass.i
+.PHONY : ProgrammingChallenge_DateClass.i
 
 # target to preprocess a source file
-CircleClass.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bonus_Lab.dir/build.make CMakeFiles/Bonus_Lab.dir/CircleClass.cpp.i
-.PHONY : CircleClass.cpp.i
+ProgrammingChallenge_DateClass.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bonus_Lab.dir/build.make CMakeFiles/Bonus_Lab.dir/ProgrammingChallenge_DateClass.cpp.i
+.PHONY : ProgrammingChallenge_DateClass.cpp.i
 
-CircleClass.s: CircleClass.cpp.s
+ProgrammingChallenge_DateClass.s: ProgrammingChallenge_DateClass.cpp.s
 
-.PHONY : CircleClass.s
+.PHONY : ProgrammingChallenge_DateClass.s
 
 # target to generate assembly for a file
-CircleClass.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bonus_Lab.dir/build.make CMakeFiles/Bonus_Lab.dir/CircleClass.cpp.s
-.PHONY : CircleClass.cpp.s
+ProgrammingChallenge_DateClass.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bonus_Lab.dir/build.make CMakeFiles/Bonus_Lab.dir/ProgrammingChallenge_DateClass.cpp.s
+.PHONY : ProgrammingChallenge_DateClass.cpp.s
 
 # Help Target
 help:
@@ -179,9 +179,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Bonus_Lab"
-	@echo "... CircleClass.o"
-	@echo "... CircleClass.i"
-	@echo "... CircleClass.s"
+	@echo "... ProgrammingChallenge_DateClass.o"
+	@echo "... ProgrammingChallenge_DateClass.i"
+	@echo "... ProgrammingChallenge_DateClass.s"
 .PHONY : help
 
 

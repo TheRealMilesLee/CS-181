@@ -1,23 +1,34 @@
 #include <iostream>
-using namespace std;
 
 class Package
 {
 private:
     int value;
 public:
+    /**
+     * This is the constructor that initialize the value = 7 and print it out
+     */
     Package()
     {
       value = 7;
-      cout << value << endl;
+      std::cout << value << std::endl;
     }
+
+    /**
+     * This constructor accepts a parameter and assign it to the value variable and print it out
+     * @param v
+     */
     Package(int v)
     {
-      value = v; cout << value << endl;
+      value = v; std::cout << value << std::endl;
     }
+
+    /**
+     * This is a destructor
+     */
     ~Package()
     {
-      cout << value << endl;
+      std::cout << value << std::endl;
     }
 };
 
