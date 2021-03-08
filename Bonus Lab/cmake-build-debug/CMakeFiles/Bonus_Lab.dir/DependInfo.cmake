@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Bonus Lab/ProgrammingChallenge_DateClass.cpp" "/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Bonus Lab/cmake-build-debug/CMakeFiles/Bonus_Lab.dir/ProgrammingChallenge_DateClass.cpp.o"
+  "D:/CS-Related/Spring2021-CS181/Bonus Lab/ProgrammingChallenges_Circle.cpp" "D:/CS-Related/Spring2021-CS181/Bonus Lab/cmake-build-debug/CMakeFiles/Bonus_Lab.dir/ProgrammingChallenges_Circle.cpp.obj"
   )
-set(CMAKE_CXX_COMPILER_ID "AppleClang")
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
