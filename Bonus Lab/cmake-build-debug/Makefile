@@ -59,19 +59,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = "/Users/leemiles/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/bin/cmake"
+CMAKE_COMMAND = "/Users/AKIRA/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/bin/cmake"
 
 # The command to remove a file.
-RM = "/Users/leemiles/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E rm -f
+RM = "/Users/AKIRA/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Bonus Lab"
+CMAKE_SOURCE_DIR = "/Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Bonus Lab"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Bonus Lab/cmake-build-debug"
+CMAKE_BINARY_DIR = "/Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Bonus Lab/cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,7 +79,7 @@ CMAKE_BINARY_DIR = "/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Bonu
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"/Users/leemiles/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/bin/cmake" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"/Users/AKIRA/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/bin/cmake" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -90,7 +90,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"/Users/leemiles/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E echo No\ interactive\ CMake\ dialog\ available.
+	"/Users/AKIRA/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Bonus Lab/cmake-build-debug/CMakeFiles" "/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Bonus Lab/cmake-build-debug/CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Bonus Lab/cmake-build-debug/CMakeFiles" "/Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Bonus Lab/cmake-build-debug/CMakeFiles/progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Bonus Lab/cmake-build-debug/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Bonus Lab/cmake-build-debug/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -143,32 +143,32 @@ Bonus_Lab/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bonus_Lab.dir/build.make CMakeFiles/Bonus_Lab.dir/build
 .PHONY : Bonus_Lab/fast
 
-ProgrammingChallenge_DateClass.o: ProgrammingChallenge_DateClass.cpp.o
+ProgrammingChallenges_Circle.o: ProgrammingChallenges_Circle.cpp.o
 
-.PHONY : ProgrammingChallenge_DateClass.o
+.PHONY : ProgrammingChallenges_Circle.o
 
 # target to build an object file
-ProgrammingChallenge_DateClass.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bonus_Lab.dir/build.make CMakeFiles/Bonus_Lab.dir/ProgrammingChallenge_DateClass.cpp.o
-.PHONY : ProgrammingChallenge_DateClass.cpp.o
+ProgrammingChallenges_Circle.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bonus_Lab.dir/build.make CMakeFiles/Bonus_Lab.dir/ProgrammingChallenges_Circle.cpp.o
+.PHONY : ProgrammingChallenges_Circle.cpp.o
 
-ProgrammingChallenge_DateClass.i: ProgrammingChallenge_DateClass.cpp.i
+ProgrammingChallenges_Circle.i: ProgrammingChallenges_Circle.cpp.i
 
-.PHONY : ProgrammingChallenge_DateClass.i
+.PHONY : ProgrammingChallenges_Circle.i
 
 # target to preprocess a source file
-ProgrammingChallenge_DateClass.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bonus_Lab.dir/build.make CMakeFiles/Bonus_Lab.dir/ProgrammingChallenge_DateClass.cpp.i
-.PHONY : ProgrammingChallenge_DateClass.cpp.i
+ProgrammingChallenges_Circle.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bonus_Lab.dir/build.make CMakeFiles/Bonus_Lab.dir/ProgrammingChallenges_Circle.cpp.i
+.PHONY : ProgrammingChallenges_Circle.cpp.i
 
-ProgrammingChallenge_DateClass.s: ProgrammingChallenge_DateClass.cpp.s
+ProgrammingChallenges_Circle.s: ProgrammingChallenges_Circle.cpp.s
 
-.PHONY : ProgrammingChallenge_DateClass.s
+.PHONY : ProgrammingChallenges_Circle.s
 
 # target to generate assembly for a file
-ProgrammingChallenge_DateClass.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bonus_Lab.dir/build.make CMakeFiles/Bonus_Lab.dir/ProgrammingChallenge_DateClass.cpp.s
-.PHONY : ProgrammingChallenge_DateClass.cpp.s
+ProgrammingChallenges_Circle.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bonus_Lab.dir/build.make CMakeFiles/Bonus_Lab.dir/ProgrammingChallenges_Circle.cpp.s
+.PHONY : ProgrammingChallenges_Circle.cpp.s
 
 # Help Target
 help:
@@ -179,9 +179,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Bonus_Lab"
-	@echo "... ProgrammingChallenge_DateClass.o"
-	@echo "... ProgrammingChallenge_DateClass.i"
-	@echo "... ProgrammingChallenge_DateClass.s"
+	@echo "... ProgrammingChallenges_Circle.o"
+	@echo "... ProgrammingChallenges_Circle.i"
+	@echo "... ProgrammingChallenges_Circle.s"
 .PHONY : help
 
 

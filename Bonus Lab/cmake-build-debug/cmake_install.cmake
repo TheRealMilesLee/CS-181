@@ -1,4 +1,4 @@
-# Install script for directory: /Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Bonus Lab
+# Install script for directory: /Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Bonus Lab
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Bonus Lab/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Bonus Lab/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
