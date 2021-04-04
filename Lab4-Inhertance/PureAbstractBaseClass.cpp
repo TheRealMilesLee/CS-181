@@ -126,6 +126,5 @@ int main()
   BasicShape *RecShape = new Rectangle(13, 16);
   RecShape->calcArea();
   RecShape->display();
-  
   return 0;
 }

@@ -52,6 +52,7 @@ public:
       std::cout << "The name of the ship is: " << get_ship_name() << std::endl
                 << "And the year of the ship is: " << get_year() << std::endl;
     }
+
 };
 
 class CruiseShip: public Ship
@@ -105,6 +106,7 @@ public:
                   << "And it has the max passenger is: " << get_max_number_passenger() << std::endl;
 
     }
+
 };
 
 class CargoShip: public Ship
@@ -166,6 +168,8 @@ int main()
     Display(ships[loop]);
   }
 
+  delete *ships;
+  
   return 0;
 }
 
