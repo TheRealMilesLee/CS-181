@@ -27,8 +27,7 @@ public:
         std::cout << "Error: " << error << std::endl;
       }
     }
-
-    void display() const // display all the elements of the array
+    void display() const
     {
       std::cout << std::endl;
       // manually displaying things
@@ -37,14 +36,12 @@ public:
         std::cout << array[loop] << ", ";
       }
     }
-    // 4: friend function declaration for ostream << operator
-    // to display all the elements by using cout
     template <class CT>
     friend std::ostream &operator<<(std::ostream &os, Storage<CT> elem);
-    // 5: declare the friend template function maximum in the following
-    friend maximum(elem); // declaration is incomplete
-    // 6: declare the friend template function searchElement in the following
-    friend searchElement(searchVal, elem); // declaration is incomplete
+    template<class DT>
+    friend DT maximum(Storage<DT> elem);
+    template<class ET>
+    friend ET searchElement(ET searchVal, Storage<ET> elem);
 };
 
 template<class CT>
@@ -52,4 +49,16 @@ std::ostream &operator<<(std::ostream &os, Storage<CT> elem)
 {
   os << elem.display();
   return os;
+}
+
+template<class DT>
+DT maximum(Storage<DT> elem)
+{
+  return nullptr;
+}
+
+template<class ET>
+ET searchElement(ET searchVal, Storage<ET> elem)
+{
+  return nullptr;
 }
