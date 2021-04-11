@@ -4,7 +4,7 @@
 class StorageException : public std::runtime_error
 {
 public:
-    StorageException(): std::runtime_error("Out of the boundary"){}
+  StorageException(): std::runtime_error("Out of the boundary"){}
 };
 
 template <class T>
@@ -15,11 +15,13 @@ private:
   int size;
   T displayResult;
 public:
-  Storage(int length){size = length; array = new T [size];}
+  Storage(){size = 0; array = 0;}
+  Storage(int length);
   Storage(const Storage &elem);
   ~Storage();
   int array_size() const{return size;}
-  T &operator[](int index)
+  T getElementAt(int position);
+  T &operator[](const int &index)
   {
     try
     {
@@ -37,17 +39,38 @@ public:
   template<class CT>
   friend std::ostream &operator<<(std::ostream &stream_insertion, const Storage<CT> &obj);
   friend T maximum(Storage<T> &elem);
-  friend T searchElement(T searchVal, Storage<T> &elem);
+  friend bool searchElement(T searchVal, Storage<T> &elem);
 };
 
 template<class T>
+Storage<T>::Storage(int length)
+{
+  size = length;
+  if(size <= 0)
+  {
+   throw StorageException();
+  }
+  array = new T [size];
+  for(size_t looptimes = 0; looptimes < size; looptimes++)
+  {
+   *(array + looptimes) = 0;
+  }
+}
+template<class T>
 Storage<T>::Storage(const Storage &elem)
 {
+  size = elem.array_size();
+  if(size <= 0)
+  {
+    throw StorageException();
+  }
   // allocate memory
   array = new T [size];
   // copy individual elements from the array
-  this->array = elem.array;
-  this->size = elem.array_size();
+  for(size_t loop = 0; loop < this->size; loop++)
+  {
+    this->operator[](loop) = elem[loop];
+  }
 }
 
 template<class T>
@@ -56,6 +79,16 @@ Storage<T>::~Storage()
   // release all the allocated memory
   delete[] array;
   std::cout << std::endl << "Deleting all the array elements ..." << std::endl;
+}
+
+template <class T>
+T Storage<T>::getElementAt(int Position)
+{
+  if (Position < 0 || Position >= size)
+  {
+    throw StorageException();
+  }
+  return array[Position];
 }
 
 template<class CT>
@@ -80,7 +113,7 @@ T maximum(Storage<T> &elem)
 }
 
 template<class T>
-T searchElement(T searchVal, Storage<T> &elem)
+bool searchElement(T searchVal, Storage<T> &elem)
 {
   try
   {
@@ -88,12 +121,12 @@ T searchElement(T searchVal, Storage<T> &elem)
     {
       throw std::out_of_range("Out of range, it should be bigger than 0");
     }
-    for(size_t loop = 0; loop < elem.size; loop++)
+    for (size_t count = 0; count <= elem.size(); count++)
     {
-       if(searchVal == elem[loop])
-       {
-         return true;
-       }
+      if (elem.getElementAt(count) == searchVal)
+      {
+        return true;
+      }
     }
     return false;
   } catch (const char *error)
@@ -112,6 +145,7 @@ void Storage<T>::display() const
     std::cout << array[loop] << ", ";
   }
 }
+
 int main()
 {
   int size;
@@ -135,19 +169,18 @@ int main()
   for (size_t count = 0; count < size; count++)
   {
     myIntStorage[count] = count;
-    myDoubleStorage[count] = (count * 2.14);
+    myDoubleStorage[count] = count * 2.14;
   }
 
   // Display the values in the SimpleVectors.
   std::cout << "Here is the int array elements" << myIntStorage << std::endl;
   std::cout << "Here is the double elements" << myDoubleStorage << std::endl;
   
-  
   //Display the max element of the array
   int maxIntElement = maximum(myIntStorage);
-  std::cout << maxIntElement << std::endl;
+  std::cout << "Here is the max element in the array" << maxIntElement << std::endl;
   double maxDoubleElement = maximum(myDoubleStorage);
-  std::cout << maxDoubleElement << std::endl;
+  std::cout << "Here is the max element in the array" << maxDoubleElement << std::endl;
   
   //Search elements in the array
   int searchIntValue = 7;
