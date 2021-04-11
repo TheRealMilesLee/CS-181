@@ -1,5 +1,5 @@
 #include <iostream>
-#include <exception>
+#include <cstdlib>
 
 class StorageException : public std::runtime_error
 {
@@ -13,8 +13,9 @@ class Storage
 private:
   T *array;
   int size;
+  T displayResult;
 public:
-  explicit Storage(int length){size = length; array = new T [size];}
+  Storage(int length){size = length; array = new T [size];}
   Storage(const Storage &elem);
   ~Storage();
   int array_size() const{return size;}
@@ -33,9 +34,10 @@ public:
     return array[index];
   }
   void display() const;
-  friend std::ostream &operator<<(std::ostream &os, Storage<T> elem);
-  friend T maximum(Storage<T> elem);
-  friend T searchElement(T searchVal, Storage<T> elem);
+  template<class CT>
+  friend std::ostream &operator<<(std::ostream &stream_insertion, const Storage<CT> &obj);
+  friend T maximum(Storage<T> &elem);
+  friend T searchElement(T searchVal, Storage<T> &elem);
 };
 
 template<class T>
@@ -44,8 +46,8 @@ Storage<T>::Storage(const Storage &elem)
   // allocate memory
   array = new T [size];
   // copy individual elements from the array
-  array = elem.array;
-  size = elem.array_size();
+  this->array = elem.array;
+  this->size = elem.array_size();
 }
 
 template<class T>
@@ -56,14 +58,15 @@ Storage<T>::~Storage()
   std::cout << std::endl << "Deleting all the array elements ..." << std::endl;
 }
 
-template<class T>
-std::ostream &operator<<(std::ostream &os, Storage<T> elem)
+template<class CT>
+std::ostream &operator<<(std::ostream &stream_insertion, const Storage<CT> &obj)
 {
-  os << elem.display();
-  return os;
+  obj.display();
+  stream_insertion << obj.displayResult;
+  return stream_insertion;
 }
 template<class T>
-T maximum(Storage<T> elem)
+T maximum(Storage<T> &elem)
 {
   T maxValue;
   for(size_t looptimes = 0; looptimes < elem.size; looptimes++)
@@ -77,7 +80,7 @@ T maximum(Storage<T> elem)
 }
 
 template<class T>
-T searchElement(T searchVal, Storage<T> elem)
+T searchElement(T searchVal, Storage<T> &elem)
 {
   try
   {
@@ -138,6 +141,7 @@ int main()
   // Display the values in the SimpleVectors.
   std::cout << "Here is the int array elements" << myIntStorage << std::endl;
   std::cout << "Here is the double elements" << myDoubleStorage << std::endl;
+  
   
   //Display the max element of the array
   int maxIntElement = maximum(myIntStorage);
