@@ -111,47 +111,47 @@ void Storage<T>::display() const
 }
 int main()
 {
-    int size;
-    try
+  int size;
+  try
+  {
+    std::cout << "Please input the size of the array: ";
+    std::cin >> size;
+    if (size <= 0)
     {
-      std::cout << "Please input the size of the array: ";
-      std::cin >> size;
-      if (size <= 0)
-      {
-        throw StorageException();
-      }
-    } catch (const char *error)
-    {
-      std::cout << "Error: " << error << std::endl;
+      throw StorageException();
     }
-    //Construct two object using the size as parameter to the array size
-    Storage<int> myIntStorage(size);
-    Storage<double> myDoubleStorage(size);
-    
-    //fill up the array
-    for (size_t count = 0; count < size; count++)
-    {
-      myIntStorage[count] = count;
-      myDoubleStorage[count] = (count * 2.14);
-    }
+  } catch (const char *error)
+  {
+    std::cout << "Error: " << error << std::endl;
+  }
+  //Construct two object using the size as parameter to the array size
+  Storage<int> myIntStorage(size);
+  Storage<double> myDoubleStorage(size);
   
-    // Display the values in the SimpleVectors.
-    std::cout << "Here is the int array elements" << myIntStorage << std::endl;
-    std::cout << "Here is the double elements" << myDoubleStorage << std::endl;
-    
-    //Display the max element of the array
-    int maxIntElement = maximum(myIntStorage);
-    std::cout << maxIntElement << std::endl;
-    double maxDoubleElement = maximum(myDoubleStorage);
-    std::cout << maxDoubleElement << std::endl;
-    
-    //Search elements in the array
-    int searchIntValue = 7;
-    bool returnFlag_Int = searchElement(searchIntValue, myIntStorage);
-    std::cout << "The result of finding is: " << returnFlag_Int;
-    double searchDoubleValue = 7.7;
-    bool returnFlag_Double = searchElement(searchDoubleValue, myDoubleStorage);
-    std::cout << "The result of finding is: " << returnFlag_Double;
-    
-    return 0;
+  //fill up the array
+  for (size_t count = 0; count < size; count++)
+  {
+    myIntStorage[count] = count;
+    myDoubleStorage[count] = (count * 2.14);
+  }
+
+  // Display the values in the SimpleVectors.
+  std::cout << "Here is the int array elements" << myIntStorage << std::endl;
+  std::cout << "Here is the double elements" << myDoubleStorage << std::endl;
+  
+  //Display the max element of the array
+  int maxIntElement = maximum(myIntStorage);
+  std::cout << maxIntElement << std::endl;
+  double maxDoubleElement = maximum(myDoubleStorage);
+  std::cout << maxDoubleElement << std::endl;
+  
+  //Search elements in the array
+  int searchIntValue = 7;
+  bool returnFlag_Int = searchElement(searchIntValue, myIntStorage);
+  std::cout << "The result of finding is: " << returnFlag_Int;
+  double searchDoubleValue = 7.7;
+  bool returnFlag_Double = searchElement(searchDoubleValue, myDoubleStorage);
+  std::cout << "The result of finding is: " << returnFlag_Double;
+  
+  return 0;
 }
