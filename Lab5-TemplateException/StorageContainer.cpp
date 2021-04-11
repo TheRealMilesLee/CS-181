@@ -1,4 +1,5 @@
 #include <iostream>
+#include <Exception>
 
 template <class T>
 class Storage
@@ -19,6 +20,12 @@ public:
     friend DT maximum(Storage<DT> elem);
     template<class ET>
     friend ET searchElement(ET searchVal, Storage<ET> elem);
+};
+
+class StorageException : public std::runtime_error
+{
+public:
+    StorageException(): std::runtime_error("Out of the boundary"){}
 };
 
 template<class CT>
@@ -45,29 +52,42 @@ DT maximum(Storage<DT> elem)
 template<class ET>
 ET searchElement(ET searchVal, Storage<ET> elem)
 {
-  size_t first = 0;
-  size_t last = elem.size() - 1;
-  size_t size = elem.size();
-  size_t position = size;
-  bool found = false;
-
-  while(!found && first < last && last < elem.size())
+  try
   {
-    size_t middle = (first + last) / 2;
-    if(elem.at(middle) == searchVal)
+    if(elem.size() <= 0)
     {
-      return true;
-    }
-    else if(elem.at(middle) > searchVal)
-    {
-      last = middle - 1;
+      throw StorageException();
     }
     else
     {
-      first = middle + 1;
+      size_t first = 0;
+      size_t last = elem.size () - 1;
+      size_t size = elem.size ();
+      size_t position = size;
+      bool found = false;
+
+      while (!found && first < last && last < elem.size ())
+      {
+        size_t middle = (first + last) / 2;
+        if (elem.at (middle) == searchVal)
+        {
+          return true;
+        }
+        else if (elem.at (middle) > searchVal)
+        {
+          last = middle - 1;
+        }
+        else
+        {
+          first = middle + 1;
+        }
+      }
+      return false;
     }
+  } catch (const char *error)
+  {
+     std::cout << "Runtime Error: " << error << std::endl;
   }
-  return false;
 }
 
 template<class T>
@@ -109,7 +129,7 @@ int Storage<T>::operator[](int index)
   {
     if (index >= size)
     {
-      throw "Index out of the boundary";
+      throw StorageException();
     }
     return array[0];
   }catch(const char &error)
