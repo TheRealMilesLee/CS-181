@@ -1,5 +1,11 @@
 #include <iostream>
-#include <Exception>
+#include <exception>
+
+class StorageException : public std::runtime_error
+{
+public:
+    StorageException(): std::runtime_error("Out of the boundary"){}
+};
 
 template <class T>
 class Storage
@@ -8,11 +14,28 @@ private:
     T *array;
     int size;
 public:
-    Storage(int length){size = 0; array = 0;}
+    Storage(int length){this->size = length; this->array[size];}
     Storage(const Storage &elem);
     ~Storage();
     int array_size() const{return size;}
-    int operator[](int index);
+    T operator[](int index)
+    {
+      try
+      {
+        if (index >= size || index <= 0)
+        {
+          throw StorageException();
+        }
+        else
+        {
+          return array[index];
+        }
+
+      }catch(const char &error)
+      {
+        std::cout << "Error: " << error << std::endl;
+      }
+    }
     void display() const;
     template <class CT>
     friend std::ostream &operator<<(std::ostream &os, Storage<CT> elem);
@@ -20,12 +43,6 @@ public:
     friend DT maximum(Storage<DT> elem);
     template<class ET>
     friend ET searchElement(ET searchVal, Storage<ET> elem);
-};
-
-class StorageException : public std::runtime_error
-{
-public:
-    StorageException(): std::runtime_error("Out of the boundary"){}
 };
 
 template<class CT>
@@ -56,16 +73,13 @@ ET searchElement(ET searchVal, Storage<ET> elem)
   {
     if(elem.size() <= 0)
     {
-      throw StorageException();
+      throw std::out_of_range("Out of range, it should be bigger than 0");
     }
     else
     {
       size_t first = 0;
       size_t last = elem.size () - 1;
-      size_t size = elem.size ();
-      size_t position = size;
       bool found = false;
-
       while (!found && first < last && last < elem.size ())
       {
         size_t middle = (first + last) / 2;
@@ -86,7 +100,7 @@ ET searchElement(ET searchVal, Storage<ET> elem)
     }
   } catch (const char *error)
   {
-     std::cout << "Runtime Error: " << error << std::endl;
+     std::cout << "Error: " << error << std::endl;
   }
 }
 
@@ -122,18 +136,13 @@ void Storage<T>::display() const
   }
 }
 
-template<class T>
-int Storage<T>::operator[](int index)
+int main()
 {
-  try
-  {
-    if (index >= size)
-    {
-      throw StorageException();
-    }
-    return array[0];
-  }catch(const char &error)
-  {
-    std::cout << "Error: " << error << std::endl;
+  try{
+    Storage<int> myStorage[10];
+
+
+  } catch(const char *error){
+
   }
 }
