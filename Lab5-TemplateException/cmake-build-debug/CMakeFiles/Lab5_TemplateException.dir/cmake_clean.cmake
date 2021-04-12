@@ -1,9 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Lab5_TemplateException.dir/StorageContainer.cpp.obj"
-  "Lab5_TemplateException.exe"
-  "Lab5_TemplateException.exe.manifest"
+  "CMakeFiles/Lab5_TemplateException.dir/StorageContainer.cpp.o"
+  "Lab5_TemplateException"
   "Lab5_TemplateException.pdb"
-  "libLab5_TemplateException.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.
