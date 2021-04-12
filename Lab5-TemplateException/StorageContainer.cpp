@@ -34,21 +34,25 @@ public:
     return array[index];
   }
   void display() const;
+  std::string to_string() const;
   template<class CT>
   friend std::ostream &operator<<(std::ostream &stream_insertion, const Storage<CT> &obj);
-  friend T maximum(Storage<T> &elem);
-  friend bool searchElement(T searchVal, Storage<T> &elem);
+  template<class DT>
+  friend DT maximum(Storage<DT> &elem);
+  template <class ET>
+  friend ET searchElement(ET searchVal, Storage<ET> &elem);
 };
 
-template<class T>
-Storage<T>::Storage(int length)
+template<class PT>
+Storage<PT>::Storage(int length)
 {
   size = length;
+  std::cout << size;
   if(size <= 0)
   {
    throw StorageException();
   }
-  array = new T [size];
+  array = new PT [size];
   for(size_t looptimes = 0; looptimes < size; looptimes++)
   {
     array[looptimes] = 0;
@@ -58,6 +62,7 @@ template<class T>
 Storage<T>::Storage(const Storage &elem)
 {
   size = elem.size;
+  
   if(size <= 0)
   {
     throw StorageException();
@@ -91,27 +96,26 @@ T Storage<T>::getElementAt(int Position)
 
 template<class CT>
 std::ostream &operator<<(std::ostream &stream_insertion, const Storage<CT> &obj)
-{
-  
-  stream_insertion << obj.display();
+{                           
+  stream_insertion << obj.to_string();
   return stream_insertion;
 }
-template<class T>
-T maximum(Storage<T> &elem)
+template<class DT>
+DT maximum(Storage<DT> &elem)
 {
-  T maxValue;
+  DT maxValue;
   for(size_t looptimes = 0; looptimes < elem.size; looptimes++)
   {
-    if (elem.at(looptimes) < elem.at(looptimes++))
+    if (elem[looptimes] < elem[looptimes++])
     {
-      maxValue = elem.at(looptimes++);
+      maxValue = elem[looptimes++];
     }
   }
   return maxValue;
 }
 
-template<class T>
-bool searchElement(T searchVal, Storage<T> &elem)
+template<class ET>
+ET searchElement(ET searchVal, Storage<ET> &elem)
 {
   try
   {
@@ -119,7 +123,7 @@ bool searchElement(T searchVal, Storage<T> &elem)
     {
       throw std::out_of_range("Out of range, it should be bigger than 0");
     }
-    for (size_t count = 0; count <= elem.size(); count++)
+    for (size_t count = 0; count <= elem.size; count++)
     {
       if (elem.getElementAt(count) == searchVal)
       {
@@ -136,12 +140,27 @@ bool searchElement(T searchVal, Storage<T> &elem)
 template<class T>
 void Storage<T>::display() const
 {
+  std::string Display;
   std::cout << std::endl;
   // manually displaying things
   for (int loop = 0; loop <= size; loop++)
   {
-    std::cout << array[loop] << ", ";
+    Display = std::to_string(array[loop]) +  ", ";
   }
+  
+}
+
+template <class T>
+std::string Storage<T>::to_string() const
+{
+  std::string Display;
+  std::cout << std::endl;
+  // manually displaying things
+  for (int loop = 0; loop <= size; loop++)
+  {
+    Display = std::to_string(array[loop]) +  ", ";
+  }
+  return Display;
 }
 
 int main()
