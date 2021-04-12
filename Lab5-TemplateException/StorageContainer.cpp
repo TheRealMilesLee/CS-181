@@ -53,7 +53,7 @@ Storage<T>::Storage(int length)
   array = new T [size];
   for(size_t looptimes = 0; looptimes < size; looptimes++)
   {
-   *(array + looptimes) = 0;
+    array[looptimes] = 0;
   }
 }
 template<class T>
