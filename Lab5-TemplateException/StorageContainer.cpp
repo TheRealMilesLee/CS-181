@@ -35,7 +35,6 @@ public:
      */
     return array[index];
   }
-  void display() const;
   std::string to_string() const;
   template<class CT>
   friend std::ostream &operator<<(std::ostream &stream_insertion, const Storage<CT> &obj);
@@ -71,8 +70,10 @@ Storage<T>::Storage(const Storage &elem)
   // allocate memory
   array = new T [size];
   // copy individual elements from the array
-  array = elem.array;
-  size = elem.size;
+  for(size_t count = 0; count < size; count++)
+  {
+    *(array + count) = *(elem.array + count);
+  }
 }
 
 template<class T>
@@ -128,17 +129,7 @@ ET searchElement(ET searchVal, Storage<ET> &elem)
   return false;
 }
 
-template<class T>
-void Storage<T>::display() const
-{
-  std::string Display;
-  // manually displaying things
-  for (int loop = 0; loop <= size; loop++)
-  {
-    Display = std::to_string(array[loop]) +  ", ";
-  }
-  
-}
+
 
 template <class T>
 std::string Storage<T>::to_string() const
@@ -166,30 +157,42 @@ int main()
     //Construct two object using the size as parameter to the array size
     Storage<int> myIntStorage(size);
     Storage<double> myDoubleStorage(size);
+    Storage<std::string> myStringStorage(size);
     
     //fill up the array
     for (int count = 0; count < size; count++)
     {
-      myIntStorage[count] = count;
+      myIntStorage[count] = count+1;
       myDoubleStorage[count] = count * 2.14;
     }
-  
+    myStringStorage[0] = "Los Santos";
+    myStringStorage[1] = "Vice City";
+    myStringStorage[2] = "Las Ventures";
+    myStringStorage[3] = "Night City";
+    
     // Display the values in the SimpleVectors.
     std::cout << "Here is the int array elements： " << myIntStorage << std::endl;
     std::cout << "Here is the double elements： " << myDoubleStorage << std::endl;
+    std::cout << "Here is the string elements: " << myStringStorage << std::endl;
     
     //Display the max element of the array
     int maxIntElement = maximum(myIntStorage);
     std::cout << "Here is the max int element in the array: " << maxIntElement << std::endl;
     double maxDoubleElement = maximum(myDoubleStorage);
     std::cout << "Here is the max double element in the array: " << maxDoubleElement << std::endl;
+    std::string maxStringElement = maximum(myStringStorage);
+    std::cout << "Here is the max string element in the array: " << maxStringElement << std::endl;
     
     //Search elements in the array
     int searchIntValue = 7;
     bool returnFlag_Int = searchElement(searchIntValue, myIntStorage);
-    std::cout << "The result of finding is: " << returnFlag_Int;
+    std::cout << "The result of finding is: " << returnFlag_Int << std::endl;
     double searchDoubleValue = 7.7;
     bool returnFlag_Double = searchElement(searchDoubleValue, myDoubleStorage);
-    std::cout << "The result of finding is: " << returnFlag_Double;
+    std::cout << "The result of finding is: " << returnFlag_Double << std::endl;
+    std::string searchStringValue = "Las Ventures";
+    bool returnFlag_String = searchElement(searchStringValue, myStringStorage);
+    std::cout << "The result of fining is: " << returnFlag_String << std::endl;
+    
   return 0;
 }
