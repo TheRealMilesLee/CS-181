@@ -1,12 +1,12 @@
 #include <iostream>
 #include <cstdlib>
-/*
+
 class StorageException : public std::runtime_error
 {
 public:
   StorageException(): std::runtime_error("Out of the boundary"){}
 };
- */
+
 template <class T>
 class Storage
 {
@@ -114,7 +114,7 @@ DT maximum(Storage<DT> &elem)
 template<class ET>
 ET searchElement(ET searchVal, Storage<ET> &elem)
 {
-  if(elem.size <= 0)
+  if(elem.size == 0)
   {
     throw std::out_of_range("Out of range, it should be bigger than 0");
   }
