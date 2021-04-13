@@ -14,11 +14,11 @@ private:
   T *array;
   int size;
 public:
-  Storage(int length);
+  explicit Storage(int length);
   Storage(const Storage &elem);
   ~Storage();
   //int array_size() const{return size;}
-  T getElementAt(int position);
+  //T getElementAt(int position);
   T &operator[](const int &index)
   {
     /*
@@ -49,7 +49,7 @@ template<class PT>
 Storage<PT>::Storage(int length)
 {
   size = length;
-  std::cout << size;
+ // std::cout << size;
   /*
   if(size <= 0)
   {
@@ -57,10 +57,6 @@ Storage<PT>::Storage(int length)
   }
    */
   array = new PT [size];
-  for(size_t looptimes = 0; looptimes < size; looptimes++)
-  {
-    array[looptimes] = 0;
-  }
 }
 template<class T>
 Storage<T>::Storage(const Storage &elem)
@@ -75,10 +71,8 @@ Storage<T>::Storage(const Storage &elem)
   // allocate memory
   array = new T [size];
   // copy individual elements from the array
-  for(size_t loop = 0; loop < this->size; loop++)
-  {
-    this->operator[](loop) = elem[loop];
-  }
+  array = elem.array;
+  size = elem.size;
 }
 
 template<class T>
@@ -88,19 +82,6 @@ Storage<T>::~Storage()
   delete[] array;
   std::cout << std::endl << "Deleting all the array elements ..." << std::endl;
 }
-
-template <class T>
-T Storage<T>::getElementAt(int Position)
-{
-  /*
-  if (Position < 0 || Position >= size)
-  {
-    throw StorageException();
-  }
-   */
-  return array[Position];
-}
-
 template<class CT>
 std::ostream &operator<<(std::ostream &stream_insertion, const Storage<CT> &obj)
 {                           
@@ -110,45 +91,47 @@ std::ostream &operator<<(std::ostream &stream_insertion, const Storage<CT> &obj)
 template<class DT>
 DT maximum(Storage<DT> &elem)
 {
-  DT maxValue;
-  for(size_t looptimes = 0; looptimes < elem.size; looptimes++)
+  const unsigned MAX = 1;
+  const unsigned MIN = 0;
+  unsigned largest = MIN;
+  unsigned smallest = MAX;
+  DT read;
+  for(unsigned looptimes = 0; looptimes < elem.size; looptimes++)
   {
-    if (elem[looptimes] < elem[looptimes++])
+    if(elem.array[looptimes] < smallest)
     {
-      maxValue = elem[looptimes++];
+      smallest = elem.array[looptimes];
     }
+    else if(elem.array[looptimes] > largest)
+    {
+      largest = elem.array[looptimes];
+    }
+    read = largest;
   }
-  return maxValue;
+  return read;
 }
 
 template<class ET>
 ET searchElement(ET searchVal, Storage<ET> &elem)
 {
-  try
+  if(elem.size <= 0)
   {
-    if(elem.size <= 0)
-    {
-      throw std::out_of_range("Out of range, it should be bigger than 0");
-    }
-    for (size_t count = 0; count <= elem.size; count++)
-    {
-      if (elem.getElementAt(count) == searchVal)
-      {
-        return true;
-      }
-    }
-    return false;
-  } catch (const char *error)
-  {
-     std::cout << "Error: " << error << std::endl;
+    throw std::out_of_range("Out of range, it should be bigger than 0");
   }
+  for (size_t count = 0; count <= elem.size; count++)
+  {
+    if (elem.array[count] == searchVal)
+    {
+      return true;
+    }
+  }
+  return false;
 }
 
 template<class T>
 void Storage<T>::display() const
 {
   std::string Display;
-  std::cout << std::endl;
   // manually displaying things
   for (int loop = 0; loop <= size; loop++)
   {
@@ -161,7 +144,6 @@ template <class T>
 std::string Storage<T>::to_string() const
 {
   std::string Display;
-  std::cout << std::endl;
   // manually displaying things
   for (int loop = 0; loop <= size; loop++)
   {
@@ -186,21 +168,21 @@ int main()
     Storage<double> myDoubleStorage(size);
     
     //fill up the array
-    for (size_t count = 0; count < size; count++)
+    for (int count = 0; count < size; count++)
     {
       myIntStorage[count] = count;
       myDoubleStorage[count] = count * 2.14;
     }
   
     // Display the values in the SimpleVectors.
-    std::cout << "Here is the int array elements" << myIntStorage << std::endl;
-    std::cout << "Here is the double elements" << myDoubleStorage << std::endl;
+    std::cout << "Here is the int array elements： " << myIntStorage << std::endl;
+    std::cout << "Here is the double elements： " << myDoubleStorage << std::endl;
     
     //Display the max element of the array
     int maxIntElement = maximum(myIntStorage);
-    std::cout << "Here is the max element in the array" << maxIntElement << std::endl;
+    std::cout << "Here is the max int element in the array: " << maxIntElement << std::endl;
     double maxDoubleElement = maximum(myDoubleStorage);
-    std::cout << "Here is the max element in the array" << maxDoubleElement << std::endl;
+    std::cout << "Here is the max double element in the array: " << maxDoubleElement << std::endl;
     
     //Search elements in the array
     int searchIntValue = 7;
