@@ -1,12 +1,12 @@
 #include <iostream>
 #include <cstdlib>
-
+/*
 class StorageException : public std::runtime_error
 {
 public:
   StorageException(): std::runtime_error("Out of the boundary"){}
 };
-
+ */
 template <class T>
 class Storage
 {
@@ -21,6 +21,7 @@ public:
   T getElementAt(int position);
   T &operator[](const int &index)
   {
+    /*
     try
     {
       if (index >= size || index <= 0)
@@ -31,6 +32,7 @@ public:
     {
       std::cout << "Error: " << error << std::endl;
     }
+     */
     return array[index];
   }
   void display() const;
@@ -48,10 +50,12 @@ Storage<PT>::Storage(int length)
 {
   size = length;
   std::cout << size;
+  /*
   if(size <= 0)
   {
    throw StorageException();
   }
+   */
   array = new PT [size];
   for(size_t looptimes = 0; looptimes < size; looptimes++)
   {
@@ -62,11 +66,12 @@ template<class T>
 Storage<T>::Storage(const Storage &elem)
 {
   size = elem.size;
-  
+   /*
   if(size <= 0)
   {
     throw StorageException();
   }
+    */
   // allocate memory
   array = new T [size];
   // copy individual elements from the array
@@ -87,10 +92,12 @@ Storage<T>::~Storage()
 template <class T>
 T Storage<T>::getElementAt(int Position)
 {
+  /*
   if (Position < 0 || Position >= size)
   {
     throw StorageException();
   }
+   */
   return array[Position];
 }
 
@@ -166,14 +173,14 @@ std::string Storage<T>::to_string() const
 int main()
 {
   int size;
-  try
-  {
     std::cout << "Please input the size of the array: ";
     std::cin >> size;
+    /*
     if (size <= 0)
     {
       throw StorageException();
     }
+     */
     //Construct two object using the size as parameter to the array size
     Storage<int> myIntStorage(size);
     Storage<double> myDoubleStorage(size);
@@ -202,9 +209,5 @@ int main()
     double searchDoubleValue = 7.7;
     bool returnFlag_Double = searchElement(searchDoubleValue, myDoubleStorage);
     std::cout << "The result of finding is: " << returnFlag_Double;
-  } catch (const char *error)
-  {
-    std::cout << "Error: " << error << std::endl;
-  }
   return 0;
 }
