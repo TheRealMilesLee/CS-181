@@ -157,13 +157,21 @@ int main()
 {
   try
   {
+    int size;
+    std::cout << "plese input the size of the array: ";
+    std::cin >> size;
+    if(size <= 0)
+    {
+      throw StorageException();
+    }
+    
     //Construct object using the size as parameter to the array size
-    Storage<int> myIntStorage(0);
-    Storage<double> myDoubleStorage(0);
-    Storage<std::string> myStringStorage(0);
+    Storage<int> myIntStorage(size);
+    Storage<double> myDoubleStorage(size);
+    Storage<std::string> myStringStorage(size);
   
     //fill up the array
-    for (int count = 0; count < 4; count++)
+    for (int count = 0; count < size; count++)
     {
       myIntStorage[count] = count+1;
       myDoubleStorage[count] = count * 2.14;
