@@ -1,0 +1,3 @@
+/Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab5-TemplateException/build/CMakeFiles/rebuild_cache.dir
+/Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab5-TemplateException/build/CMakeFiles/edit_cache.dir
+/Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab5-TemplateException/build/CMakeFiles/Lab5_TemplateException.dir
