@@ -8,18 +8,18 @@
 		},
 		"paths" : 
 		{
-			"cmake" : "/usr/local/Cellar/cmake/3.19.4/bin/cmake",
-			"cpack" : "/usr/local/Cellar/cmake/3.19.4/bin/cpack",
-			"ctest" : "/usr/local/Cellar/cmake/3.19.4/bin/ctest",
-			"root" : "/usr/local/Cellar/cmake/3.19.4/share/cmake"
+			"cmake" : "/usr/local/Cellar/cmake/3.20.1/bin/cmake",
+			"cpack" : "/usr/local/Cellar/cmake/3.20.1/bin/cpack",
+			"ctest" : "/usr/local/Cellar/cmake/3.20.1/bin/ctest",
+			"root" : "/usr/local/Cellar/cmake/3.20.1/share/cmake"
 		},
 		"version" : 
 		{
 			"isDirty" : false,
 			"major" : 3,
-			"minor" : 19,
-			"patch" : 4,
-			"string" : "3.19.4",
+			"minor" : 20,
+			"patch" : 1,
+			"string" : "3.20.1",
 			"suffix" : ""
 		}
 	},
@@ -35,7 +35,7 @@
 			}
 		},
 		{
-			"jsonFile" : "cache-v2-d19b665937577192a5a7.json",
+			"jsonFile" : "cache-v2-f0245264174062350ae7.json",
 			"kind" : "cache",
 			"version" : 
 			{
@@ -64,7 +64,7 @@
 				"responses" : 
 				[
 					{
-						"jsonFile" : "cache-v2-d19b665937577192a5a7.json",
+						"jsonFile" : "cache-v2-f0245264174062350ae7.json",
 						"kind" : "cache",
 						"version" : 
 						{
