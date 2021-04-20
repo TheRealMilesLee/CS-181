@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Lab3_Inhertance.dir/Abstract_Member_Function.cpp.o"
+  "CMakeFiles/Lab3_Inhertance.dir/Abstract_Member_Function.cpp.o.d"
   "Lab3_Inhertance"
   "Lab3_Inhertance.pdb"
 )

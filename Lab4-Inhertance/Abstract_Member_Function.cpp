@@ -9,7 +9,7 @@
 
 class Ship
 {
-protected:
+private:
     std::string ship_name;
    int year;
 public:
@@ -69,7 +69,6 @@ public:
     CruiseShip(std::string name, int yearBoat, int max_passenger) : Ship(name, yearBoat)
     {
       set_ship_name(name);
-      set_year(year);
       set_max_passenger(max_passenger);
     }
 
@@ -78,18 +77,6 @@ public:
      * @param max_number is a int value that contains the max number of the passenger
      */
     void set_max_passenger(int max_number){max_number_passenger = max_number;}
-
-    /**
-     * This function is to get the year of the ship
-     * @return a int value that contains the year of the ship
-     */
-    int get_year() const override {return year;}
-
-    /**
-     * This function is to get the name of the ship
-     * @return a string value that contain the name of the ship
-     */
-    std::string get_ship_name() const override {return ship_name;}
 
     /**
      * This function is to get the max capacity of the ship

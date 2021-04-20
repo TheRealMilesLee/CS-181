@@ -1,15 +1,14 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "CXX"
   )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab4-Inhertance/Abstract_Member_Function.cpp" "/Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab4-Inhertance/build/CMakeFiles/Lab3_Inhertance.dir/Abstract_Member_Function.cpp.o"
-  )
-set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
-# The include file search paths:
-set(CMAKE_CXX_TARGET_INCLUDE_PATH
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab4-Inhertance/Abstract_Member_Function.cpp" "CMakeFiles/Lab3_Inhertance.dir/Abstract_Member_Function.cpp.o" "gcc" "CMakeFiles/Lab3_Inhertance.dir/Abstract_Member_Function.cpp.o.d"
   )
 
 # Targets to which this target links.
