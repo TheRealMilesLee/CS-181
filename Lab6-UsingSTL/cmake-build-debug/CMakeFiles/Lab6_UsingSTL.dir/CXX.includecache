@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab6-UsingSTL/ReverseFileUsing.cpp
+iostream
+-
+fstream
+-
+algorithm
+-
+
