@@ -63,26 +63,11 @@ void LinkedList<T>::append(T data)
 template<class T>
 void LinkedList<T>::reverseOutput()
 {
-  Node *currentPtr = headPtr;
-  Node *previousPtr = nullptr;
-  Node *nextPtr = nullptr;
+  //TODO #1 Need using dynamic stack variable to reverse the contents of the file.
+
   //Open the output file
   std::ofstream output_file;
   output_file.open("../output.txt");
-
-  //As long as currentPtr is pointing to some valid node
-  while(currentPtr != nullptr)
-  {
-    //Initialize the next pointer points to the next node of the list
-    nextPtr = currentPtr->next;
-    //Flip the node pointer to make it points to the previous node
-    currentPtr->next = previousPtr;
-    //Move previous and current pointer one node forward
-    previousPtr = currentPtr;
-    currentPtr = nextPtr;
-  }
-  //Make head pointer points to the first element of the new list (i.e. the last element of the original list)
-  headPtr = previousPtr;
   //Output everything
   std::cout << std::endl << "Output the node elements" << std::endl;
   Node *outputPtr = headPtr;
