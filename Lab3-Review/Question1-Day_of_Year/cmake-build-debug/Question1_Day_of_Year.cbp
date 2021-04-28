@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug"/>
+				<Option working_dir="/Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug"/>
+				<Option working_dir="/Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug"/>
+				<Option working_dir="/Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Question1_Day_of_Year">
-				<Option output="/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug/Question1_Day_of_Year" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug"/>
+				<Option output="/Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug/Question1_Day_of_Year" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -52,15 +52,15 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug/Makefile&quot;  VERBOSE=1 Question1_Day_of_Year"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug/Makefile&quot;  VERBOSE=1 Question1_Day_of_Year"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Question1_Day_of_Year/fast">
-				<Option output="/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug/Question1_Day_of_Year" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug"/>
+				<Option output="/Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug/Question1_Day_of_Year" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -73,17 +73,17 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug/Makefile&quot;  VERBOSE=1 Question1_Day_of_Year/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug/Makefile&quot;  VERBOSE=1 Question1_Day_of_Year/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/DayOfYear.cpp">
+		<Unit filename="/Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/DayOfYear.cpp">
 			<Option target="Question1_Day_of_Year"/>
 		</Unit>
-		<Unit filename="/Users/leemiles/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/CMakeLists.txt">
+		<Unit filename="/Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab3-Review/Question1-Day_of_Year/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
