@@ -38,25 +38,33 @@ public:
     }
   }
 
-  void pop()
+  void reverseOutput()
   {
-    std::cout << std::endl << "Pop the node elements" << std::endl;
     Node *currentPtr = headPtr;
-    Node *endPtr = nullptr;
+    Node *previousPtr = NULL;
+    Node *next = NULL;
     std::ofstream output_file;
     output_file.open("../output.txt");
+    while(currentPtr != NULL)
+    {
+      next = currentPtr->next;
+      currentPtr->next = previousPtr;
+      previousPtr = currentPtr;
+      currentPtr = next;
+    }
+    headPtr = previousPtr;
+
+    std::cout << "\nDisplaying the node elements\n";
+    Node *outputPtr = headPtr;
     // as long as currentPtr is pointing to some valid node
-      std::reverse(currentPtr, endPtr);
-      while(currentPtr != nullptr)
-      {
-         // display the node value
-            output_file << currentPtr->data << " ";
-            // move to the next node
-            currentPtr = currentPtr->next;
-      }
-
+    while (outputPtr != nullptr)
+    {
+        // display the node value
+        output_file << outputPtr->data << " ";
+        // move to the next node
+        outputPtr = outputPtr->next;
+    }
   }
-
   // destructor to release allocated memory
   ~LinkedList()
   {
@@ -85,10 +93,7 @@ int main()
     infile >> readFile;
     myList.append (readFile);
   }
-  //myList.pop();
-  
-  std::ofstream output_file;
-  output_file.open("../output.txt");
+  myList.reverseOutput();
 
   return 0;
 }
