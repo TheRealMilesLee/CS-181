@@ -1,3 +1,9 @@
+//Hengyi Li
+//This is a Linked list Program
+//This Program Created by Hengyi Li on 5:15 PM, April 27, 2021
+//This Program has been done by Hengyi Li on 10:18 PM, April 27, 2021.
+//Copyright @ 2021 Hengyi Li. All rights reserved.
+
 #include <iostream>
 #include <fstream>
 #include <algorithm>
@@ -13,9 +19,21 @@ private:
   };
   Node *headPtr;
 public:
+  /**
+   * This is the constructor that makes the list empty
+   */
   LinkedList(){headPtr = nullptr;}
+  /**
+   * This function is to add the value at the end of the list
+   */
   void append(T data);
+  /**
+   * This function is to reverse the list element and output
+   */
   void reverseOutput();
+  /**
+   * This is the destructor to released the memory
+   */
   ~LinkedList();
 };
 
@@ -25,7 +43,6 @@ void LinkedList<T>::append(T data)
   Node *newNode = new Node;
   newNode->data = data;
   newNode->next = nullptr;
-  
   // is the list empty, then headPtr should point to the newNode
   if (headPtr == nullptr)
   {
@@ -48,9 +65,11 @@ void LinkedList<T>::reverseOutput()
 {
   Node *currentPtr = headPtr;
   Node *previousPtr = nullptr;
-  Node *nextPtr;
+  Node *nextPtr = nullptr;
+  //Open the output file
   std::ofstream output_file;
   output_file.open("../output.txt");
+  //As long as currentPtr is pointing to some valid node
   while(currentPtr != nullptr)
   {
     //Initialize the next pointer points to the next node of the list
@@ -70,7 +89,6 @@ void LinkedList<T>::reverseOutput()
   while (outputPtr != nullptr)
   {
     output_file << outputPtr->data << " ";
-    // move to the next node
     outputPtr = outputPtr->next;
   }
 }
