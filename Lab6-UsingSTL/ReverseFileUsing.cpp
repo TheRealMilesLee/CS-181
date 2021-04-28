@@ -93,6 +93,6 @@ int main()
     myList.append (readFile);
   }
   myList.reverseOutput();
-  
+
   return 0;
 }
