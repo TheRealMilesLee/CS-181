@@ -69,6 +69,7 @@ void LinkedList<T>::reverseOutput()
   //Open the output file
   std::ofstream output_file;
   output_file.open("../output.txt");
+
   //As long as currentPtr is pointing to some valid node
   while(currentPtr != nullptr)
   {
