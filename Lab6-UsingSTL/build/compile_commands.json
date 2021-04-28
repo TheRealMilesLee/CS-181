@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab6-UsingSTL/build",
+  "command": "/usr/bin/clang++   -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++11 -o CMakeFiles/Lab6_UsingSTL.dir/ReverseFileUsing.cpp.o -c /Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab6-UsingSTL/ReverseFileUsing.cpp",
+  "file": "/Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab6-UsingSTL/ReverseFileUsing.cpp"
+}
+]
