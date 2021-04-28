@@ -37,22 +37,26 @@ public:
       currentPtr->next = newNode;
     }
   }
-  
+
   void pop()
   {
     std::cout << std::endl << "Pop the node elements" << std::endl;
-    Node *currentPtr = nullptr;
+    Node *currentPtr = headPtr;
+    Node *endPtr = nullptr;
     std::ofstream output_file;
     output_file.open("../output.txt");
     // as long as currentPtr is pointing to some valid node
-    while (currentPtr != nullptr)
-    {
-      // display the node value
-      output_file << currentPtr->data << " ";
-      // move to the next node
-      currentPtr = currentPtr->prev;
-    }
+      std::reverse(currentPtr, endPtr);
+      while(currentPtr != nullptr)
+      {
+         // display the node value
+            output_file << currentPtr->data << " ";
+            // move to the next node
+            currentPtr = currentPtr->next;
+      }
+
   }
+
   // destructor to release allocated memory
   ~LinkedList()
   {
@@ -81,7 +85,10 @@ int main()
     infile >> readFile;
     myList.append (readFile);
   }
-  myList.pop();
+  //myList.pop();
   
+  std::ofstream output_file;
+  output_file.open("../output.txt");
+
   return 0;
 }
