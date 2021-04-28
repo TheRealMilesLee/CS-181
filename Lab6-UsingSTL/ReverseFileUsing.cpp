@@ -41,11 +41,11 @@ public:
   void reverseOutput()
   {
     Node *currentPtr = headPtr;
-    Node *previousPtr = NULL;
-    Node *next = NULL;
+    Node *previousPtr = nullptr;
+    Node *next = nullptr;
     std::ofstream output_file;
     output_file.open("../output.txt");
-    while(currentPtr != NULL)
+    while(currentPtr != nullptr)
     {
       next = currentPtr->next;
       currentPtr->next = previousPtr;
@@ -59,7 +59,6 @@ public:
     // as long as currentPtr is pointing to some valid node
     while (outputPtr != nullptr)
     {
-        // display the node value
         output_file << outputPtr->data << " ";
         // move to the next node
         outputPtr = outputPtr->next;
@@ -94,6 +93,6 @@ int main()
     myList.append (readFile);
   }
   myList.reverseOutput();
-
+  
   return 0;
 }
