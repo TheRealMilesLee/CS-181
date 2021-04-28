@@ -41,7 +41,7 @@ public:
   void pop()
   {
     std::cout << std::endl << "Pop the node elements" << std::endl;
-    Node *currentPtr = headPtr;
+    Node *currentPtr = nullptr;
     std::ofstream output_file;
     output_file.open("../output.txt");
     // as long as currentPtr is pointing to some valid node
@@ -50,7 +50,7 @@ public:
       // display the node value
       output_file << currentPtr->data << " ";
       // move to the next node
-      currentPtr = currentPtr->next;
+      currentPtr = currentPtr->prev;
     }
   }
   // destructor to release allocated memory
