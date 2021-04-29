@@ -94,6 +94,7 @@ void LinkedList<T>::Output(LinkedList &List)
       // move to the next node
       currentPtr = currentPtr->next;
   }
+  output_file.close();
 }
 
 template<class T>
@@ -130,6 +131,8 @@ int main()
   }
   //output everything
   myList.Output(myList);
+
+  infile.close();
 
   return 0;
 }
