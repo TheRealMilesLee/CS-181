@@ -33,20 +33,10 @@ public:
    */
   LinkedList(){headPtr = nullptr;}
   /**
-   * This function is to add the value at the end of the list
+   * @brief This push
+   * 
    */
-  void append(T data);
-
-    /**
-   * This function overload the [] symbol
-   * @param index is the place on array
-   * @return the place on the array
-   */
-  T &operator[](Node *loopPtr);
-
-  void pop(T &item);
-
-  int size();
+  void push(T);
 
   bool isEmpty();
 
@@ -60,62 +50,6 @@ public:
    */
   ~LinkedList();
 };
-/*
-template<class T>
-int LinkedList<T>::size()
-{
-  int count = 0;
-  Node *currentPtr = headPtr;
-  while (currentPtr->next != nullptr)
-  {
-    currentPtr = currentPtr->next;
-    count++;
-  }
-  return count;
-}
-*/
-
-template<class T>
-void LinkedList<T>::append(T data)
-{
-  Node *newNode = new Node;
-  newNode->data = data;
-  newNode->next = nullptr;
-  // is the list empty, then headPtr should point to the newNode
-  if (headPtr == nullptr)
-  {
-    headPtr = newNode;
-  }
-  else // otherwise, navigate to the last node of the list
-  {
-    int count = 1;
-    Node *currentPtr = headPtr;
-    while (currentPtr->next != nullptr)
-    {
-      currentPtr = currentPtr->next;
-      count++;
-    }
-    // make the last node link to the newNode
-    currentPtr->next = newNode;
-  }
-}
-/*
-template <class T>
-T &LinkedList<T>::operator[](Node *loopPtr)
-{
-  Node *currentPtr = headPtr;
-  while (currentPtr->next != nullptr)
-  {
-    if(loopPtr == currentPtr)
-    {
-      return currentPtr;
-    }
-    else
-    {
-      currentPtr = currentPtr->next;
-    }
-  }
-}
 
 template <class T>
 bool LinkedList<T>::isEmpty()
@@ -126,9 +60,30 @@ bool LinkedList<T>::isEmpty()
    }
    return false;
 }
-*/
 
+template <class T>
+void LinkedList<T>::push(T item)
+{
+   Node *newNode = nullptr; // Pointer to a new node
 
+   // Allocate a new node and store num there.
+   newNode = new Node;
+   newNode->data = item;
+
+   // If there are no nodes in the list
+   // make newNode the first node.
+   if (isEmpty())
+   {
+      headPtr = newNode;
+      newNode->next = nullptr;
+   }
+   else  // Otherwise, insert NewNode before top.
+   {
+      newNode->next = headPtr;
+      headPtr = newNode;
+   }
+}
+ 
 template<class T>
 void LinkedList<T>::Output(LinkedList &List)
 {
@@ -139,16 +94,13 @@ void LinkedList<T>::Output(LinkedList &List)
   output_file.open("../output.txt");
   //Output everything
   std::cout << std::endl << "Output the node elements" << std::endl;
-  std::vector<T>outputVector;
-  while(currentPtr != nullptr)
+  // as long as currentPtr is pointing to some valid node
+  while (currentPtr != nullptr)
   {
-    outputVector.push_back(currentPtr->data);
-    outputVector.push_back(" ");
-    currentPtr = currentPtr->next;
-  }
-  for(size_t loop = outputVector.size()-1; loop < outputVector.size(); loop--)
-  {
-    output_file << outputVector.at(loop);
+      // display the node value
+      output_file << currentPtr->data << " ";
+      // move to the next node
+      currentPtr = currentPtr->next;
   }
 }
 
@@ -170,14 +122,14 @@ LinkedList<T>::~LinkedList()
 
 int main()
 {
-  LinkedList<std::string>myList;
+  LinkedList<std::string> myList;
   std::ifstream infile;
   infile.open("../input.txt");
   std::string readFile;
   while(!infile.eof())
   {
     infile >> readFile;
-    myList.append (readFile);
+    myList.push(readFile);
   }
   myList.Output(myList);
 
