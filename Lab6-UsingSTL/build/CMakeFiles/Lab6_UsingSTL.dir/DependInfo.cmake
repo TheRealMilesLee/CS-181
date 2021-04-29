@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab6-UsingSTL/WordFrequency.cpp" "CMakeFiles/Lab6_UsingSTL.dir/WordFrequency.cpp.o" "gcc" "CMakeFiles/Lab6_UsingSTL.dir/WordFrequency.cpp.o.d"
+  "/Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab6-UsingSTL/ReverseFileUsing.cpp" "CMakeFiles/Lab6_UsingSTL.dir/ReverseFileUsing.cpp.o" "gcc" "CMakeFiles/Lab6_UsingSTL.dir/ReverseFileUsing.cpp.o.d"
   )
 
 # Targets to which this target links.

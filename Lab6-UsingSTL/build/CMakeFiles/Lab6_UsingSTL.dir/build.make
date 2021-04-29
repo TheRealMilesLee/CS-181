@@ -69,28 +69,28 @@ include CMakeFiles/Lab6_UsingSTL.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Lab6_UsingSTL.dir/flags.make
 
-CMakeFiles/Lab6_UsingSTL.dir/WordFrequency.cpp.o: CMakeFiles/Lab6_UsingSTL.dir/flags.make
-CMakeFiles/Lab6_UsingSTL.dir/WordFrequency.cpp.o: ../WordFrequency.cpp
-CMakeFiles/Lab6_UsingSTL.dir/WordFrequency.cpp.o: CMakeFiles/Lab6_UsingSTL.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab6-UsingSTL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Lab6_UsingSTL.dir/WordFrequency.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lab6_UsingSTL.dir/WordFrequency.cpp.o -MF CMakeFiles/Lab6_UsingSTL.dir/WordFrequency.cpp.o.d -o CMakeFiles/Lab6_UsingSTL.dir/WordFrequency.cpp.o -c /Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab6-UsingSTL/WordFrequency.cpp
+CMakeFiles/Lab6_UsingSTL.dir/ReverseFileUsing.cpp.o: CMakeFiles/Lab6_UsingSTL.dir/flags.make
+CMakeFiles/Lab6_UsingSTL.dir/ReverseFileUsing.cpp.o: ../ReverseFileUsing.cpp
+CMakeFiles/Lab6_UsingSTL.dir/ReverseFileUsing.cpp.o: CMakeFiles/Lab6_UsingSTL.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab6-UsingSTL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Lab6_UsingSTL.dir/ReverseFileUsing.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lab6_UsingSTL.dir/ReverseFileUsing.cpp.o -MF CMakeFiles/Lab6_UsingSTL.dir/ReverseFileUsing.cpp.o.d -o CMakeFiles/Lab6_UsingSTL.dir/ReverseFileUsing.cpp.o -c /Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab6-UsingSTL/ReverseFileUsing.cpp
 
-CMakeFiles/Lab6_UsingSTL.dir/WordFrequency.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Lab6_UsingSTL.dir/WordFrequency.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab6-UsingSTL/WordFrequency.cpp > CMakeFiles/Lab6_UsingSTL.dir/WordFrequency.cpp.i
+CMakeFiles/Lab6_UsingSTL.dir/ReverseFileUsing.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Lab6_UsingSTL.dir/ReverseFileUsing.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab6-UsingSTL/ReverseFileUsing.cpp > CMakeFiles/Lab6_UsingSTL.dir/ReverseFileUsing.cpp.i
 
-CMakeFiles/Lab6_UsingSTL.dir/WordFrequency.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Lab6_UsingSTL.dir/WordFrequency.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab6-UsingSTL/WordFrequency.cpp -o CMakeFiles/Lab6_UsingSTL.dir/WordFrequency.cpp.s
+CMakeFiles/Lab6_UsingSTL.dir/ReverseFileUsing.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Lab6_UsingSTL.dir/ReverseFileUsing.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab6-UsingSTL/ReverseFileUsing.cpp -o CMakeFiles/Lab6_UsingSTL.dir/ReverseFileUsing.cpp.s
 
 # Object files for target Lab6_UsingSTL
 Lab6_UsingSTL_OBJECTS = \
-"CMakeFiles/Lab6_UsingSTL.dir/WordFrequency.cpp.o"
+"CMakeFiles/Lab6_UsingSTL.dir/ReverseFileUsing.cpp.o"
 
 # External object files for target Lab6_UsingSTL
 Lab6_UsingSTL_EXTERNAL_OBJECTS =
 
-Lab6_UsingSTL: CMakeFiles/Lab6_UsingSTL.dir/WordFrequency.cpp.o
+Lab6_UsingSTL: CMakeFiles/Lab6_UsingSTL.dir/ReverseFileUsing.cpp.o
 Lab6_UsingSTL: CMakeFiles/Lab6_UsingSTL.dir/build.make
 Lab6_UsingSTL: CMakeFiles/Lab6_UsingSTL.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab6-UsingSTL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Lab6_UsingSTL"

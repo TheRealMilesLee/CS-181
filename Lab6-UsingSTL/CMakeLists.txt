@@ -3,4 +3,4 @@ project(Lab6_UsingSTL)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(Lab6_UsingSTL WordFrequency.cpp)
+add_executable(Lab6_UsingSTL ReverseFileUsing.cpp)
