@@ -1,21 +1,12 @@
 //Hengyi Li
 //This is a Linked list Program
 //This Program Created by Hengyi Li on 5:15 PM, April 27, 2021
-//This Program has been done by Hengyi Li on 10:18 PM, April 27, 2021.
+//This Program has been done by Hengyi Li on 11:08 PM, April 28, 2021.
 //Copyright @ 2021 Hengyi Li. All rights reserved.
 
 #include <iostream>
 #include <fstream>
 #include <algorithm>
-#include <exception>
-#include <vector>
-#include<sstream>
-
-class StorageException : public std::runtime_error
-{
-public:
-  StorageException(): std::runtime_error("Out of the boundary"){}
-};
 
 template <class T>
 class LinkedList
@@ -33,11 +24,13 @@ public:
    */
   LinkedList(){headPtr = nullptr;}
   /**
-   * @brief This push
-   * 
+   *  This function push the element to the list
    */
   void push(T);
-
+  /**
+   * This function is to check whether the list is empty
+   * @return the boolean value, true is empty, false is not empty
+   */
   bool isEmpty();
 
   /**
@@ -87,7 +80,6 @@ void LinkedList<T>::push(T item)
 template<class T>
 void LinkedList<T>::Output(LinkedList &List)
 {
-  //TODO #1 Need using dynamic stack variable to reverse the contents of the file.
   Node *currentPtr = headPtr;
   //Open the output file
   std::ofstream output_file;
@@ -122,15 +114,21 @@ LinkedList<T>::~LinkedList()
 
 int main()
 {
+  //Create a linked list
   LinkedList<std::string> myList;
+  //preparing file open
   std::ifstream infile;
+  //open the file
   infile.open("../input.txt");
+  //preparing the temp variable for transferring data
   std::string readFile;
-  while(!infile.eof())
+  //Reading from the file
+  while(infile >> readFile)
   {
-    infile >> readFile;
+    //Push data to the list
     myList.push(readFile);
   }
+  //output everything
   myList.Output(myList);
 
   return 0;

@@ -41,6 +41,7 @@ int main()
   {
     std::cout << "Failed to opend the file!";
   }
+  //Close the file
   infile.close();
   
   return 0;
