@@ -20,24 +20,33 @@ int main()
   
   //Created a map that using word as its key and the number it appear as the value
   std::map<std::string, int> wordCount;
-  
-  //Reading stuff from the file;
-  while (infile >> Temp)
+  if(!infile.fail())
   {
-    //convert everything to lowercase
-    transform(Temp.begin(), Temp.end(), Temp.begin(), ::tolower);
-    // Use [] access the map. Inside the [] is the key
-    // If the map is empty it will create a new pair of the key, value.
-    // Use ++ to initialize the value that corresponds to the key. 
-    // And when two key are the same, the value will increment too
-    ++wordCount[Temp];
+    //Reading stuff from the file;
+    while (infile >> Temp)
+    {
+      //convert everything to lowercase
+      transform(Temp.begin(), Temp.end(), Temp.begin(), ::tolower);
+      // Use [] access the map. Inside the [] is the key
+      // If the map is empty it will create a new pair of the key, value.
+      // Use ++ to initialize the value that corresponds to the key. 
+      // And when two key are the same, the value will increment too
+      ++wordCount[Temp];
+    }
+
+    //using foreach loop to output everything
+    for (const auto& element: wordCount)
+    {
+      std::cout << element.first << " " << element.second << std::endl;
+    }
+  }
+  else
+  {
+    std::cout << "Failed to opend the file!";
   }
 
-  //using foreach loop to output everything
-  for (const auto& element: wordCount)
-  {
-    std::cout << element.first << " " << element.second << std::endl;
-  }
+  infile.close();
+  
   
   return 0;
 }
