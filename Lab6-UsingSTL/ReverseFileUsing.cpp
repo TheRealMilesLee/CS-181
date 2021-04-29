@@ -27,15 +27,33 @@ public:
    * This function is to add the value at the end of the list
    */
   void append(T data);
+
+    /**
+   * This function overload the [] symbol
+   * @param index is the place on array
+   * @return the place on the array
+   */
+  T &operator[](const int &index);
+
   /**
    * This function is to reverse the list element and output
    */
   void reverseOutput();
+
   /**
    * This is the destructor to released the memory
    */
   ~LinkedList();
 };
+template <class T>
+T &LinkedList<T>::operator[](const int &index)
+{
+  if (index >= size || index < 0)
+  {
+    throw StorageException();
+  }
+  return array[index];
+}
 
 template<class T>
 void LinkedList<T>::append(T data)
@@ -64,7 +82,7 @@ template<class T>
 void LinkedList<T>::reverseOutput()
 {
   //TODO #1 Need using dynamic stack variable to reverse the contents of the file.
-
+  
   //Open the output file
   std::ofstream output_file;
   output_file.open("../output.txt");
