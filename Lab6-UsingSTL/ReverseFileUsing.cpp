@@ -7,6 +7,15 @@
 #include <iostream>
 #include <fstream>
 #include <algorithm>
+#include <exception>
+#include <vector>
+#include<sstream>
+
+class StorageException : public std::runtime_error
+{
+public:
+  StorageException(): std::runtime_error("Out of the boundary"){}
+};
 
 template <class T>
 class LinkedList
@@ -28,20 +37,43 @@ public:
    */
   void append(T data);
 
+    /**
+   * This function overload the [] symbol
+   * @param index is the place on array
+   * @return the place on the array
+   */
+  T &operator[](Node *loopPtr);
+
   void pop(T &item);
+
+  int size();
 
   bool isEmpty();
 
   /**
    * This function is to reverse the list element and output
    */
-  void Output();
+  void Output(LinkedList &List);
 
   /**
    * This is the destructor to released the memory
    */
   ~LinkedList();
 };
+/*
+template<class T>
+int LinkedList<T>::size()
+{
+  int count = 0;
+  Node *currentPtr = headPtr;
+  while (currentPtr->next != nullptr)
+  {
+    currentPtr = currentPtr->next;
+    count++;
+  }
+  return count;
+}
+*/
 
 template<class T>
 void LinkedList<T>::append(T data)
@@ -67,23 +99,22 @@ void LinkedList<T>::append(T data)
     currentPtr->next = newNode;
   }
 }
-
+/*
 template <class T>
-void LinkedList<T>::pop(T &item)
+T &LinkedList<T>::operator[](Node *loopPtr)
 {
-   Node *temp = nullptr; // Temporary pointer
-   // First make sure the stack isn't empty.
-   if (isEmpty())
-   {
-      std::cout << "The stack is empty.\n";
-   }
-   else  // pop value off top of stack
-   {
-      item = headPtr-> data;
-      temp = headPtr->next;
-      delete headPtr;
-      headPtr = temp;
-   }
+  Node *currentPtr = headPtr;
+  while (currentPtr->next != nullptr)
+  {
+    if(loopPtr == currentPtr)
+    {
+      return currentPtr;
+    }
+    else
+    {
+      currentPtr = currentPtr->next;
+    }
+  }
 }
 
 template <class T>
@@ -95,24 +126,29 @@ bool LinkedList<T>::isEmpty()
    }
    return false;
 }
+*/
 
 
 template<class T>
-void LinkedList<T>::Output()
+void LinkedList<T>::Output(LinkedList &List)
 {
   //TODO #1 Need using dynamic stack variable to reverse the contents of the file.
-
+  Node *currentPtr = headPtr;
   //Open the output file
   std::ofstream output_file;
   output_file.open("../output.txt");
   //Output everything
   std::cout << std::endl << "Output the node elements" << std::endl;
-  Node *outputPtr = headPtr;
-  // as long as currentPtr is pointing to some valid node
-  while (outputPtr != nullptr)
+  std::vector<T>outputVector;
+  while(currentPtr != nullptr)
   {
-    output_file << outputPtr->data << " ";
-    outputPtr = outputPtr->next;
+    outputVector.push_back(currentPtr->data);
+    outputVector.push_back(" ");
+    currentPtr = currentPtr->next;
+  }
+  for(size_t loop = outputVector.size()-1; loop < outputVector.size(); loop--)
+  {
+    output_file << outputVector.at(loop);
   }
 }
 
@@ -143,7 +179,7 @@ int main()
     infile >> readFile;
     myList.append (readFile);
   }
-  myList.Output();
+  myList.Output(myList);
 
   return 0;
 }
