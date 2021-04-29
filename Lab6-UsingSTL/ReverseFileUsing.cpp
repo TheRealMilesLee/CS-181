@@ -28,32 +28,20 @@ public:
    */
   void append(T data);
 
-    /**
-   * This function overload the [] symbol
-   * @param index is the place on array
-   * @return the place on the array
-   */
-  T &operator[](const int &index);
+  void pop(T &item);
+
+  bool isEmpty();
 
   /**
    * This function is to reverse the list element and output
    */
-  void reverseOutput();
+  void Output();
 
   /**
    * This is the destructor to released the memory
    */
   ~LinkedList();
 };
-template <class T>
-T &LinkedList<T>::operator[](const int &index)
-{
-  if (index >= size || index < 0)
-  {
-    throw StorageException();
-  }
-  return array[index];
-}
 
 template<class T>
 void LinkedList<T>::append(T data)
@@ -68,21 +56,52 @@ void LinkedList<T>::append(T data)
   }
   else // otherwise, navigate to the last node of the list
   {
+    int count = 1;
     Node *currentPtr = headPtr;
     while (currentPtr->next != nullptr)
     {
       currentPtr = currentPtr->next;
+      count++;
     }
     // make the last node link to the newNode
     currentPtr->next = newNode;
   }
 }
 
+template <class T>
+void LinkedList<T>::pop(T &item)
+{
+   Node *temp = nullptr; // Temporary pointer
+   // First make sure the stack isn't empty.
+   if (isEmpty())
+   {
+      std::cout << "The stack is empty.\n";
+   }
+   else  // pop value off top of stack
+   {
+      item = headPtr-> data;
+      temp = headPtr->next;
+      delete headPtr;
+      headPtr = temp;
+   }
+}
+
+template <class T>
+bool LinkedList<T>::isEmpty()
+{
+   if ( headPtr == nullptr)
+   {
+     return true;
+   }
+   return false;
+}
+
+
 template<class T>
-void LinkedList<T>::reverseOutput()
+void LinkedList<T>::Output()
 {
   //TODO #1 Need using dynamic stack variable to reverse the contents of the file.
-  
+
   //Open the output file
   std::ofstream output_file;
   output_file.open("../output.txt");
@@ -124,7 +143,7 @@ int main()
     infile >> readFile;
     myList.append (readFile);
   }
-  myList.reverseOutput();
+  myList.Output();
 
   return 0;
 }

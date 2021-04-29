@@ -22,13 +22,14 @@ int main()
   std::map<std::string, int> wordCount;
   
   //Reading stuff from the file;
-  while (infile >> Temp;)
+  while (infile >> Temp)
   {
     //convert everything to lowercase
     transform(Temp.begin(), Temp.end(), Temp.begin(), ::tolower);
-    //Use [] access the map. Inside the [] is the key
-    // if the map is empty it will create a new pair of the key, value.
-    // Use ++ to initialize the value that corresponds to the key. And when two key are the same, the value will increment too
+    // Use [] access the map. Inside the [] is the key
+    // If the map is empty it will create a new pair of the key, value.
+    // Use ++ to initialize the value that corresponds to the key. 
+    // And when two key are the same, the value will increment too
     ++wordCount[Temp];
   }
 
