@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Lab6_UsingSTL.dir/ReverseFileUsing.cpp.o"
-  "CMakeFiles/Lab6_UsingSTL.dir/ReverseFileUsing.cpp.o.d"
+  "CMakeFiles/Lab6_UsingSTL.dir/WordFrequency.cpp.o"
+  "CMakeFiles/Lab6_UsingSTL.dir/WordFrequency.cpp.o.d"
   "Lab6_UsingSTL"
   "Lab6_UsingSTL.pdb"
 )

@@ -14,10 +14,8 @@ int main()
   //Open the file to read
   std::ifstream infile;
   infile.open("../words.txt");
-  
   //Create a temp variable to storing the documents temporarily
   std::string Temp;
-  
   //Created a map that using word as its key and the number it appear as the value
   std::map<std::string, int> wordCount;
   if(!infile.fail())
@@ -33,7 +31,6 @@ int main()
       // And when two key are the same, the value will increment too
       ++wordCount[Temp];
     }
-
     //using foreach loop to output everything
     for (const auto& element: wordCount)
     {
@@ -44,9 +41,7 @@ int main()
   {
     std::cout << "Failed to opend the file!";
   }
-
   infile.close();
-  
   
   return 0;
 }

@@ -129,29 +129,29 @@ Lab6_UsingSTL/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab6_UsingSTL.dir/build.make CMakeFiles/Lab6_UsingSTL.dir/build
 .PHONY : Lab6_UsingSTL/fast
 
-ReverseFileUsing.o: ReverseFileUsing.cpp.o
-.PHONY : ReverseFileUsing.o
+WordFrequency.o: WordFrequency.cpp.o
+.PHONY : WordFrequency.o
 
 # target to build an object file
-ReverseFileUsing.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab6_UsingSTL.dir/build.make CMakeFiles/Lab6_UsingSTL.dir/ReverseFileUsing.cpp.o
-.PHONY : ReverseFileUsing.cpp.o
+WordFrequency.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab6_UsingSTL.dir/build.make CMakeFiles/Lab6_UsingSTL.dir/WordFrequency.cpp.o
+.PHONY : WordFrequency.cpp.o
 
-ReverseFileUsing.i: ReverseFileUsing.cpp.i
-.PHONY : ReverseFileUsing.i
+WordFrequency.i: WordFrequency.cpp.i
+.PHONY : WordFrequency.i
 
 # target to preprocess a source file
-ReverseFileUsing.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab6_UsingSTL.dir/build.make CMakeFiles/Lab6_UsingSTL.dir/ReverseFileUsing.cpp.i
-.PHONY : ReverseFileUsing.cpp.i
+WordFrequency.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab6_UsingSTL.dir/build.make CMakeFiles/Lab6_UsingSTL.dir/WordFrequency.cpp.i
+.PHONY : WordFrequency.cpp.i
 
-ReverseFileUsing.s: ReverseFileUsing.cpp.s
-.PHONY : ReverseFileUsing.s
+WordFrequency.s: WordFrequency.cpp.s
+.PHONY : WordFrequency.s
 
 # target to generate assembly for a file
-ReverseFileUsing.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab6_UsingSTL.dir/build.make CMakeFiles/Lab6_UsingSTL.dir/ReverseFileUsing.cpp.s
-.PHONY : ReverseFileUsing.cpp.s
+WordFrequency.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lab6_UsingSTL.dir/build.make CMakeFiles/Lab6_UsingSTL.dir/WordFrequency.cpp.s
+.PHONY : WordFrequency.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Lab6_UsingSTL"
-	@echo "... ReverseFileUsing.o"
-	@echo "... ReverseFileUsing.i"
-	@echo "... ReverseFileUsing.s"
+	@echo "... WordFrequency.o"
+	@echo "... WordFrequency.i"
+	@echo "... WordFrequency.s"
 .PHONY : help
 
 
