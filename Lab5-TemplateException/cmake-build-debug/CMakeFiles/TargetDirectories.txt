@@ -1,3 +1,3 @@
-/Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab5-TemplateException/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab5-TemplateException/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/AKIRA/ComputerScienceRelated/Spring2021-CS181/Lab5-TemplateException/cmake-build-debug/CMakeFiles/Lab5_TemplateException.dir
+D:/CS-Related/Spring2021-CS181/Lab5-TemplateException/cmake-build-debug/CMakeFiles/Lab5_TemplateException.dir
+D:/CS-Related/Spring2021-CS181/Lab5-TemplateException/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/CS-Related/Spring2021-CS181/Lab5-TemplateException/cmake-build-debug/CMakeFiles/rebuild_cache.dir
