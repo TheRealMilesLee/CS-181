@@ -1,30 +1,53 @@
-#include <iostream>
-
+#include<iostream>
+#include<string>
 using namespace std;
-
-class SomeClass
+class Student 
 {
 private:
-    int *value;
+    int * id;
+    string name;
 public:
-    SomeClass(int val = 0)
+    Student(int id_value, string name_value)
     {
-        value = new int;
-        *value = val;
+        id = new int;
+        *id = id_value;
+        name = name_value;
     }
-    ~SomeClass()
+
+    Student (const Student & right_object)
+    { 	
+        id = new int;
+        *id = *right_object.id;
+        name = right_object.name;
+    }
+
+    ~Student()
+    {	
+        delete  id;
+    }
+    void set_id(int id_value)
     {
-        delete value;
+        *id = id_value;
     }
-    int getVal()
-    { return *value; }
-    void setVal(int val)
+    string to_string()
     { 
-      value = &val; 
+        return std::to_string(*id) + "; " + name;
     }
 };
 
+// driver program
 int main()
-{
+{	
+    Student first (101, "John"); 
+    cout<< first.to_string() << endl;
 
+    Student second = first; // second.id = first.id
+    //cout<< second.to_string() << endl;
+
+    second.set_id(107);
+    //	 cout<< second.to_string() << endl;
+    //	 
+    cout<< first.to_string() << endl;
+        
+    return 0;
 }
