@@ -13,66 +13,135 @@ private:
     int feet;
     int inches;
 public:
-
-    FeetInches(int feet_param = 0, int inches_param = 0);
-
-    /**
-     * This is the copy constructor accept a FeetInches object as an argument.
-     * @param param is the object parameter
-     */
-    FeetInches (const FeetInches &param);
-
-    /**
-     * This function is to simplify the feet and inches input and checks the value if is greater that 12 or less that 0.
-     * If such a value is found, the numbers in feet and inches are adjusted to conform to a standard feet & inches expression.
-     */
-    void simplify();
-
-    /**
-     * This function is to overload the + operator
-     * @return the result of the operator overload +.
-     */
     FeetInches operator+(const FeetInches &) const;
-
-    /**
-     * This function is to overload the - operator
-     * @return the result of the operator overload -.
-     */
     FeetInches operator-(const FeetInches &) const;
-
-    /**
-     * This function is to overload the >= operator
-     * @return the boolean comparison result
-     */
+    FeetInches operator * (const FeetInches &) const;
+    FeetInches operator / (const FeetInches &) const;
     bool operator>=(const FeetInches &) const;
-
-    /**
-     * This function is to overload the <= operator
-     * @return the boolean comparison result
-     */
     bool operator<=(const FeetInches &) const;
-
-    /**
-     * This function is to overload the == operator
-     * @return the boolean comparison result
-     */
     bool operator==(const FeetInches &) const;
-
-    /**
-     * This function is to overload the != operator
-     * @return the boolean comparison result
-     */
     bool operator!=(const FeetInches &) const;
-
-    /**
-     * This function is to overload the stream insertion operator
-     * @return the result of the stream insertion act.
-     */
     friend std::ostream &operator<<(std::ostream &, const FeetInches &);
-
-    /**
-     * This function is to overload the stream extraction operator
-     * @return the result of the stream extraction act.
-     */
     friend std::istream &operator>>(std::istream &, FeetInches &);
+    void simplify();
 };
+void FeetInches::simplify()
+{
+  if (inches >= 12)
+  {
+    feet += (inches / 12);
+    inches = inches % 12;
+  }
+  else if (inches < 0)
+  {
+    feet -= ((abs(inches) / 12) + 1);
+    inches = 12 - (abs(inches) % 12);
+  }
+}
+
+FeetInches FeetInches::operator+(const FeetInches &right) const
+{
+  FeetInches temp;
+
+  temp.inches = inches + right.inches;
+  temp.feet = feet + right.feet;
+  temp.simplify();
+  return temp;
+}
+
+FeetInches FeetInches::operator-(const FeetInches &right) const
+{
+  FeetInches temp;
+
+  temp.inches = inches - right.inches;
+  temp.feet = feet - right.feet;
+  temp.simplify();
+  return temp;
+}
+
+FeetInches FeetInches::operator*(const FeetInches &right) const
+{
+  FeetInches temp;
+  temp.feet = (this -> feet * right.feet) - (this -> inches * right.inches);
+  temp.inches = (this -> inches * right.inches) + (this -> inches * right.feet);
+  temp.simplify();
+  return temp;
+}
+
+FeetInches FeetInches::operator/(const FeetInches &right) const
+{
+  FeetInches temp;
+  temp.feet = ((this -> feet * right.feet) + (this -> inches * right.inches)) / (right.feet * right.feet + right.inches * right.inches);
+  temp.inches = ((this -> inches * right.feet) - (this -> feet * right.inches)) / (right.feet * right.feet + right.inches * right.inches);
+  return temp;
+}
+
+bool FeetInches::operator>=(const FeetInches &right) const
+{
+  bool status;
+  if (feet >= right.feet)
+  {
+    status = true;
+  }
+  else
+  {
+    status = false;
+  }
+  return status;
+}
+
+bool FeetInches::operator<=(const FeetInches &right) const
+{
+  bool status;
+  if (feet <= right.feet)
+  {
+    status = true;
+  }
+  else
+  {
+    status = false;
+  }
+  return status;
+}
+
+bool FeetInches::operator!=(const FeetInches &right) const
+{
+  bool status;
+  if (feet != right.feet && inches != right.inches)
+  {
+    status = true;
+  }
+  else
+  {
+    status = false;
+  }
+  return status;
+}
+bool FeetInches::operator==(const FeetInches &right) const
+{
+  bool status;
+  if (feet == right.feet && inches == right.inches)
+  {
+    status = true;
+  }
+  else
+  {
+    status = false;
+  }
+  return status;
+}
+std::ostream &operator<<(std::ostream &stream_insertion, const FeetInches &obj)
+{
+  stream_insertion << obj.feet << " feet, " << obj.inches << " inches";
+  return stream_insertion;
+}
+std::istream &operator>>(std::istream &stream_extraction, FeetInches &obj)
+{
+  std::cout << "Feet: ";
+  stream_extraction >> obj.feet;
+  std::cout << "Inches: ";
+  stream_extraction >> obj.inches;
+
+  obj.simplify();
+  return stream_extraction;
+}
