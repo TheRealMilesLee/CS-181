@@ -15,7 +15,7 @@ for(auto it = numbers.begin(); it != numbers.end(); it++)
   cout << *it << endl;
 }
 //Display using iterator reverse
-for(auto it = numbers.end(); it >= numbers.begin(); it--)
+for(auto it = numbers.end()-1; it >= numbers.begin(); it--)
 {
   cout << *it << endl;
 }
