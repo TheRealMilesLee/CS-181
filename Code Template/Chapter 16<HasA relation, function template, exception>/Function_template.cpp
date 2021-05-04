@@ -17,7 +17,7 @@ int main()
   cout << mutiplcation( num1,  num2) ;
   return 0;
 }
------------------------------------------------------------------------
+//-----------------------------------------------------------------------
 // multiple data types
 template<class T1, class T2>
 double mpg(T1 miles, T2 gallons)
