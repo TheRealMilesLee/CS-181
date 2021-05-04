@@ -21,10 +21,12 @@ int main()
    int element = 9; // the element that we are looking for in the aray
    
    int found_index = BinarySearch(array, 0, n-1, element);
-   if(found_index == -1 ) {
+   if(found_index == -1 ) 
+   {
       cout<< "Element not found in the array " << endl;
    }
-   else {
+   else 
+   {
       cout << "Element found at index :" << found_index << endl;
    }
    return 0;
